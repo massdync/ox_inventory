@@ -21,7 +21,6 @@ return {
 			usetime = 2500,
 			cancel = true,
 			notification = 'You drank some beer',
-			--export = 'custom_item:testbeer'
 		}
     }
 }
