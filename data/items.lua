@@ -1,4 +1,4 @@
-return {
+local items = {
 	['testburger'] = {
 		label = 'Test Burger',
 		weight = 220,
@@ -223,3 +223,10 @@ return {
 		weight = 80,
 	},
 }
+
+local customItems = require 'data.custom.items'
+for name, info in pairs(customItems) do
+	items[name] = info
+end
+
+return items

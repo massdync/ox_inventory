@@ -1,4 +1,4 @@
-return {
+local items = {
 	Weapons = {
 		['WEAPON_BATTLERIFLE'] = {
 			label = 'Battle Rifle',
@@ -1878,3 +1878,13 @@ return {
 		},
 	}
 }
+
+local customItems = require 'data.custom.weapons'
+
+for category, categoryItem in pairs(customItems) do
+    for name, info in pairs(categoryItem) do
+        items[category][name] = info
+    end
+end
+
+return items
