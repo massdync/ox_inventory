@@ -22,5 +22,19 @@ return {
 			cancel = true,
 			notification = 'You drank some beer',
 		}
-    }
+    },
+	['cartracker'] = {
+		label = "Car Tracker",
+		weight = 1,
+		stack = false,
+		close = false,
+		description = "Car tracker, put it in vehicles' trunk to track them",
+		client = {
+			-- RESOURCE_NAME.ITEM_NAME
+			export = 'ct.cartracker'
+		},
+		server = {
+			export = 'ct.cartracker'
+		}
+	}
 }

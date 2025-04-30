@@ -13,6 +13,9 @@ dependencies {
     '/onesync',
     'oxmysql',
     'ox_lib',
+
+    -- Added this line for starting ox_inventory AFTER ox_target
+    'ox_target'
 }
 
 shared_script '@ox_lib/init.lua'
