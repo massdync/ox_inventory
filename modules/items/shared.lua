@@ -1,3 +1,11 @@
+local function mergeTable(t1, t2)
+	for k, v in pairs(t2) do
+		t1[k] = v
+	end
+end
+
+---------
+
 local function useExport(resource, export)
 	return function(...)
 		return exports[resource][export](nil, ...)
@@ -73,7 +81,13 @@ local function newItem(data)
 	ItemList[data.name] = data
 end
 
-for type, data in pairs(lib.load('data.weapons')) do
+---------- Also load custom weapons defined in data/custom/weapons.lua
+
+local oxWeapons = lib.load('data.weapons')
+local customWeapons = lib.load('data.custom.weapons')
+mergeTable(oxWeapons, customWeapons)
+
+for type, data in pairs(oxWeapons) do
 	for k, v in pairs(data) do
 		v.name = k
 		v.close = type == 'Ammo' and true or false
@@ -106,7 +120,13 @@ for type, data in pairs(lib.load('data.weapons')) do
 	end
 end
 
-for k, v in pairs(lib.load('data.items')) do
+---------- Also load custom items defined in data/custom/items.lua
+
+local oxItems = lib.load('data.items')
+local customItems = lib.load('data.custom.items')
+mergeTable(oxItems, customItems)
+
+for k, v in pairs(oxItems) do
 	v.name = k
 	local success, response = pcall(newItem, v)
 

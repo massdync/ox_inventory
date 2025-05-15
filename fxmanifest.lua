@@ -13,6 +13,7 @@ dependencies {
     '/onesync',
     'oxmysql',
     'ox_lib',
+    'ox_target'
 }
 
 shared_script '@ox_lib/init.lua'
@@ -44,4 +45,7 @@ files {
     'modules/**/client.lua',
     'modules/bridge/**/client.lua',
     'data/*.lua',
+
+    -- Custom items, weapons etc 
+    'data/custom/*.lua',
 }
