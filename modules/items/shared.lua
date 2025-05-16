@@ -1,11 +1,3 @@
-local function mergeTable(t1, t2)
-	for k, v in pairs(t2) do
-		t1[k] = v
-	end
-end
-
----------
-
 local function useExport(resource, export)
 	return function(...)
 		return exports[resource][export](nil, ...)
@@ -85,7 +77,12 @@ end
 
 local oxWeapons = lib.load('data.weapons')
 local customWeapons = lib.load('data.custom.weapons')
-mergeTable(oxWeapons, customWeapons)
+
+for category, categoryItem in pairs(customWeapons) do
+	for name, info in pairs(categoryItem) do
+		oxWeapons[category][name] = info
+	end
+end
 
 for type, data in pairs(oxWeapons) do
 	for k, v in pairs(data) do
@@ -124,7 +121,10 @@ end
 
 local oxItems = lib.load('data.items')
 local customItems = lib.load('data.custom.items')
-mergeTable(oxItems, customItems)
+
+for k, v in pairs(customItems) do
+	oxItems[k] = v
+end
 
 for k, v in pairs(oxItems) do
 	v.name = k
