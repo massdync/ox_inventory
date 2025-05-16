@@ -753,6 +753,7 @@ local function registerCommands()
 		end
 	end
 
+	--[[
 	local primary = lib.addKeybind({
 		name = 'inv',
 		description = locale('open_player_inventory'),
@@ -779,9 +780,47 @@ local function registerCommands()
 			return client.openInventory()
 		end
 	})
+	]]
+	
+	-- Allow players to open trunk as well on with primary inventory's keybind
+	local primary = lib.addKeybind({
+		name = 'inv',
+		description = locale('open_player_inventory'),
+		defaultKey = client.keys[1],
+		onPressed = function()
+			if invOpen then
+				return client.closeInventory()
+			end
+			if cache.vehicle then
+				return openGlovebox(cache.vehicle)
+			end
+			local closest = lib.points.getClosestPoint()
+			if closest and closest.currentDistance < 1.2 and (not closest.instance or closest.instance == currentInstance) then
+				if closest.inv == 'crafting' then
+					return client.openInventory('crafting', { id = closest.id, index = closest.index })
+				elseif closest.inv ~= 'license' and closest.inv ~= 'policeevidence' then
+					return client.openInventory(closest.inv or 'drop', { id = closest.invId, type = closest.type })
+				end
+			end
+			-- Add trunk checking functionality here
+			local entity, entityType = Utils.Raycast(2|16)
+			if entity then
+				if not shared.target and entityType == 3 then
+					local model = GetEntityModel(entity)
+					if Inventory.Dumpsters:includes(model) then
+						return Inventory.OpenDumpster(entity)
+					end
+				end
+				if entityType == 2 then
+					return Inventory.OpenTrunk(entity)
+				end
+			end
+			return client.openInventory()
+		end
+	})
 
 	lib.addKeybind({
-		name = 'inv2',
+		name = 'in2',
 		description = locale('open_secondary_inventory'),
 		defaultKey = client.keys[2],
 		onPressed = function(self)
