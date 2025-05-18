@@ -43,6 +43,8 @@ What I want to implement in this fork:
 
 - [ ] Prevent item loss from trying to pick up an item when inventory maximum weight is reached
 
+    (Should be implemented in [this](https://github.com/massdync/ox_inventory/commit/00d4300dc6029108ca4eea4e6658218b1b22952f#diff-bc487b75ad87b845be11d33676e87d8984e237be83eef8e518147ccac5797996) commit?)
+
     Same as the one above, I believe this can also be done within the same event listener.
 
 Some of the items above might be finished but need further tests.
