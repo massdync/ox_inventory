@@ -1,5 +1,40 @@
 # ox_inventory
 
+This is a fork of the original ox_inventory v2.41.0, with QB support
+
+What I want to implement in this fork:
+
+- [ ] Better way to add custom items without modifying the original files
+
+    The original way to add new items is modifying files like `data/items.lua`. In my opinion this isn't effective and might cause errors (This script treats the file as plain text when adding new items into it). So I created the `data/custom/` directory and I can just add items into the `.lua` files in there.
+
+    I modified some of the logic to make the script to be able to read these custom files. Here's an example in `modules/items/shared.lua`:
+
+    ```lua
+    local oxWeapons = lib.load('data.weapons')
+    local customWeapons = lib.load('data.custom.weapons')
+
+    for category, categoryItem in pairs(customWeapons) do
+        for name, info in pairs(categoryItem) do
+            oxWeapons[category][name] = info
+        end
+    end
+    ```
+
+    There's more across the script, see this [issue](https://github.com/massdync/ox_inventory/issues/1)
+
+- [ ] Prevent item loss from trying to pick up an item when inventory is full
+
+    I had experience with ox_inventory where I'm allowed to pickup an item via ox_target but the item wasn't actually added to my inventory because it was full, and the item disappeared after that
+
+    I believe this can be done via returning `false` in an event listener (Return `true` to allow the action, `false` to cancel it), see: https://overextended.dev/ox_inventory/Events/Client
+
+- [ ] Prevent item loss from trying to pick up an item when inventory maximum weight is reached
+
+    Same as the one above, I believe this can also be done within the same event listener.
+
+<hr>
+
 A complete inventory system for FiveM, implementing items, weapons, shops, and more without any strict framework dependency.
 
 ![](https://img.shields.io/github/downloads/overextended/ox_inventory/total?logo=github)
