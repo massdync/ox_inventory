@@ -1093,6 +1093,10 @@ function Inventory.AddItem(inv, item, count, metadata, slot, cb)
 
 	if not inv?.slots then return false, 'invalid_inventory' end
 
+	-- Check for weight
+	local canCarry = Inventory.CanCarryItem(inv, item, count, metadata)  
+	if not canCarry then return false, 'cannot_carry_weight' end  
+
 	local toSlot, slotMetadata, slotCount
 	local success, response = false
 	count = math.floor(count + 0.5)

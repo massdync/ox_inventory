@@ -4,13 +4,18 @@ This is a fork of the original ox_inventory v2.41.0, with QB support
 
 What I want to implement in this fork:
 
+- [x] Allow opening trunks with primary inventory button
+
+    See line 786 in [client.lua](./client.lua) and [config.cfg](./config.cfg)
+
 - [ ] Better way to add custom items without modifying the original files
 
-    The original way to add new items is modifying files like `data/items.lua`. In my opinion this isn't effective and might cause errors (This script treats the file as plain text when adding new items into it). So I created the `data/custom/` directory and I can just add items into the `.lua` files in there.
+    The original way to add new items is modifying files like [data/items.lua](data/items.lua). In my opinion this isn't effective and might cause errors (This script treats the file as plain text when adding new items into it). So I created the [data/custom/](data/custom/) directory and I can just add items into the `.lua` files in there.
 
-    I modified some of the logic to make the script to be able to read these custom files. Here's an example in `modules/items/shared.lua`:
+    I modified some of the logic to make the script to be able to read these custom files. Here's an example in [modules/items/shared.lua](modules/items/shared.lua):
 
     ```lua
+    -- Read both files and merge them into 1 table
     local oxWeapons = lib.load('data.weapons')
     local customWeapons = lib.load('data.custom.weapons')
 
@@ -19,11 +24,18 @@ What I want to implement in this fork:
             oxWeapons[category][name] = info
         end
     end
+
+    -- The original logic etc...
+    for type, data in pairs(oxWeapons) do
+        ...
+    end
     ```
 
     There's more across the script, see this [issue](https://github.com/massdync/ox_inventory/issues/1)
 
 - [ ] Prevent item loss from trying to pick up an item when inventory is full
+
+    (Already implemented by the original creators?)
 
     I had experience with ox_inventory where I'm allowed to pickup an item via ox_target but the item wasn't actually added to my inventory because it was full, and the item disappeared after that
 
@@ -32,6 +44,8 @@ What I want to implement in this fork:
 - [ ] Prevent item loss from trying to pick up an item when inventory maximum weight is reached
 
     Same as the one above, I believe this can also be done within the same event listener.
+
+Some of the items above might be finished but need further tests.
 
 <hr>
 
