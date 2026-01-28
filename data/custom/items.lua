@@ -28,22 +28,4 @@ return {
         label = '丙酮 (測試)',
         weight = 1,
     },
-
-    -- [[ Card test ]] --
-    ['jj_s66'] = {
-        label = '【ジョジョの奇妙な冒険 黄金の風】卡包',
-        description = '黃金之風的卡包，每包內含9張卡牌',
-        stack = true,
-        weight = 10,
-        client = {
-            image = 'custom/jj_s66/_pack.png'
-        }
-    },
-    ['jj_s66_001ssp'] = {
-        label = 'test',
-        weight = 1,
-        client = {
-            image = "custom/jj_s66/ssp/jj_s66_001ssp.png"
-        }
-    }
 }

@@ -126,6 +126,7 @@ end
 
 loadItems(lib.load('data.items') or {})
 loadItems(lib.load('data.custom.items') or {}, true)
+loadItems(lib.load('data.custom.items_cards') or {}, true)
 
 ----------
 
