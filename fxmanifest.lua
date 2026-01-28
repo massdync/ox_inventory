@@ -44,4 +44,7 @@ files {
     'modules/**/client.lua',
     'modules/bridge/**/client.lua',
     'data/*.lua',
+
+    'web/images/*.png',
+    'data/custom/*.lua',
 }

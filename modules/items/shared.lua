@@ -106,14 +106,28 @@ for type, data in pairs(lib.load('data.weapons') or {}) do
 	end
 end
 
-for k, v in pairs(lib.load('data.items') or {}) do
-	v.name = k
-	local success, response = pcall(newItem, v)
+----------
 
-    if not success then
-        warn(('An error occurred while creating item "%s" callback!\n^1SCRIPT ERROR: %s^0'):format(k, response))
+local function loadItems(items, debug)
+    debug = debug or false
+    for k, v in pairs(items) do
+        v.name = k
+        local success, response = pcall(newItem, v)
+
+        if not success then
+            warn(('An error occurred while creating item "%s" callback!\n^1SCRIPT ERROR: %s^0'):format(k, response))
+        else
+            if (debug) then
+                print(('Added item: %s'):format(k))
+            end
+        end
     end
 end
+
+loadItems(lib.load('data.items') or {})
+loadItems(lib.load('data.custom.items') or {}, true)
+
+----------
 
 ItemList.cash = ItemList.money
 
