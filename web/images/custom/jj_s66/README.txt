@@ -1,0 +1,1 @@
+The card images & folders should be flattened, since here is for inventory displaying only
