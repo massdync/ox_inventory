@@ -3,14 +3,11 @@ return {
     ['hkp'] = {
         label = '警察證件',
         weight = 500,
-        stack = false,         -- Police ID should usually be unique per player, not stackable
-        close = true,          -- Matches shouldClose = true (closes inventory on use)
+        stack = false,
+        close = true,
         description = 'HKP的證件',
         client = {
-            image = 'hkp.png',
-            -- Optional: If using this item triggers something (e.g., show ID animation/menu),
-            -- add an export here instead of old QB events
-            -- export = 'your_police_resource.showHKPID'
+            image = 'custom/hkp.png',
         }
     },
 
@@ -35,6 +32,9 @@ return {
     -- [[ Card test ]] --
     ['jj_s66_001ssp'] = {
         label = 'test',
-        weight=1
+        weight = 1,
+        client = {
+            image = "custom/jj_s66/jj_s66_001ssp.png"
+        }
     }
 }
