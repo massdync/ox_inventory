@@ -1,1 +1,0 @@
-There are only N, JJR and SP rarities, SP rarity cards are not added yet
