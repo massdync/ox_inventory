@@ -191,7 +191,7 @@ return {
     ["jjs66099"]    = createCard("[CC] 今にも落ちて来そうな空の下で", "custom/jj_s66/jjs66099.png"),
 
     -- JJ/SE41 - Stardust Crusaders
-    ["jj_se41_pack"] = createPack('【ジョジョの奇妙な冒険 スターダストクルセイダース】卡包', '星塵遠征軍的卡包，每包內含9張卡牌', 10, 'custom/jj_se41/_pack.png'),
+    ["jj_se41_pack"] = createPack('【ジョジョの奇妙な冒険 スターダストクルセイダース】卡包', '星塵遠征軍的卡包，每包內含3張卡牌', 10, 'custom/jj_se41/_pack.png'),
     ["jjse4101j"]    = createCard("[JJR] (ホロ)過去最高の力 DIO", "custom/jj_se41/jjse4101j.png"),
     ["jjse4102j"]    = createCard("[JJR] (ホロ)地獄の門番 ペット・ショップ", "custom/jj_se41/jjse4102j.png"),
     ["jjse4103"]     = createCard("[N] 「セト神」のアレッシー", "custom/jj_se41/jjse4103.png"),
@@ -297,7 +297,7 @@ return {
     ["jjse41p01s"]   = createCard("[PR] 煌めく宝石 承太郎(金箔押し)", "custom/jj_se41/jjse41p01s.png"),
 
     -- JJ/SE42 - Stone Ocean
-    ["jj_se42_pack"] = createPack('【ジョジョの奇妙な冒険 ストーンオーシャン】卡包', '石之海的卡包，每包內含9張卡牌', 10, 'custom/jj_se42/_pack.png'),
+    ["jj_se42_pack"] = createPack('【ジョジョの奇妙な冒険 ストーンオーシャン】卡包', '石之海的卡包，每包內含3張卡牌', 10, 'custom/jj_se42/_pack.png'),
     ["jjse4201"]     = createCard("[N] 2枚のDISC Ws", "custom/jj_se42/jjse4201.png"),
     ["jjse4201j"]    = createCard("[JJR] (ホロ)2枚のDISC Ws", "custom/jj_se42/jjse4201j.png"),
     ["jjse4202"]     = createCard("[N] ヴィヴァーノ・W＆P・W", "custom/jj_se42/jjse4202.png"),
