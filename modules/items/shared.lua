@@ -73,42 +73,56 @@ local function newItem(data)
 	ItemList[data.name] = data
 end
 
-for type, data in pairs(lib.load('data.weapons') or {}) do
-	for k, v in pairs(data) do
-		v.name = k
-		v.close = type == 'Ammo' and true or false
-        v.weight = v.weight or 0
+--------------------------------------------------
 
-		if type == 'Weapons' then
-			---@cast v OxWeapon
-			v.model = v.model or k -- actually weapon type or such? model for compatibility
-			v.hash = joaat(v.model)
-			v.stack = v.throwable and true or false
-			v.durability = v.durability or 0.05
-			v.weapon = true
-		else
-			v.stack = true
-		end
+local function loadWeapons(weapons, debug)
+    weapons = weapons or {}
+    debug = debug or false
+    for type_, data in pairs(weapons) do
+        for k, v in pairs(data) do
+            v.name = k
+            v.close = type_ == 'Ammo' and true or false
+            v.weight = v.weight or 0
 
-		v[type == 'Ammo' and 'ammo' or type == 'Components' and 'component' or type == 'Tints' and 'tint' or 'weapon'] = true
+            if type_ == 'Weapons' then
+                ---@cast v OxWeapon
+                v.model = v.model or k -- actually weapon type or such? model for compatibility
+                v.hash = joaat(v.model)
+                v.stack = v.throwable and true or false
+                v.durability = v.durability or 0.05
+                v.weapon = true
+            else
+                v.stack = true
+            end
 
-		if isServer then v.client = nil else
-			v.count = 0
-			v.server = nil
-			local clientData = v.client
+            v[type_ == 'Ammo' and 'ammo' or type_ == 'Components' and 'component' or type_ == 'Tints' and 'tint' or 'weapon'] = true
 
-			if clientData?.image then
-                clientData.image = setImagePath(clientData.image)
-			end
-		end
+            if isServer then v.client = nil else
+                v.count = 0
+                v.server = nil
+                local clientData = v.client
 
-		ItemList[k] = v
-	end
+                if clientData?.image then
+                    clientData.image = setImagePath(clientData.image)
+                end
+            end
+            
+            -- k: str, v: table
+            ItemList[k] = v
+            if (debug) then
+                print('Added weapon: ' .. k)
+            end
+        end
+    end
 end
 
-----------
+loadWeapons(lib.load('data.weapons'))
+loadWeapons(lib.load('data.custom.weapons'), true)
+
+--------------------------------------------------
 
 local function loadItems(items, debug)
+    items = items or {}
     debug = debug or false
     for k, v in pairs(items) do
         v.name = k
@@ -118,15 +132,17 @@ local function loadItems(items, debug)
             warn(('An error occurred while creating item "%s" callback!\n^1SCRIPT ERROR: %s^0'):format(k, response))
         else
             if (debug) then
-                print(('Added item: %s'):format(k))
+                print('Added item: ' .. k)
             end
         end
     end
 end
 
-loadItems(lib.load('data.items') or {})
-loadItems(lib.load('data.custom.items') or {}, true)
-loadItems(lib.load('data.custom.items_cards') or {}, true)
+local CARDS_DEBUG_MSG = false
+
+loadItems(lib.load('data.items'))
+loadItems(lib.load('data.custom.items'), CARDS_DEBUG_MSG)
+loadItems(lib.load('data.custom.items_cards'), CARDS_DEBUG_MSG)
 
 ----------
 
