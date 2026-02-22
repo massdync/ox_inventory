@@ -6,7 +6,10 @@ return {
 			label = 'Neon SMG',
 			weight = 1000,
 			durability = 0.05,
-			ammoname = 'ammo-rifle'
+			ammoname = 'ammo-rifle',
+            client = {
+                image = 'custom/WEAPON_NEON_SMG.png'
+            }
 		},
 
 		['WEAPON_NEON_AK'] = {
@@ -14,6 +17,9 @@ return {
 			weight = 4500,
 			durability = 0.03,
 			ammoname = 'ammo-rifle2',
+            client = {
+                image = 'custom/WEAPON_NEON_AK.png'
+            }
 		},
     }
 }
