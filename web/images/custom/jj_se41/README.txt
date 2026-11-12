@@ -1,0 +1,1 @@
+PR rarity cards are not added
