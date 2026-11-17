@@ -136,11 +136,10 @@ local function loadItems(items, debug)
     end
 end
 
-local CARDS_DEBUG_MSG = false
 
 loadItems(lib.load('data.items'))
-loadItems(lib.load('data.custom.items'), CARDS_DEBUG_MSG)
-loadItems(lib.load('data.custom.cards'), CARDS_DEBUG_MSG)
+loadItems(lib.load('data.custom.items'))
+
 
 --------------------------------------------------
 

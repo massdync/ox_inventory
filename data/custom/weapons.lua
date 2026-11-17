@@ -1,4 +1,9 @@
 return {
+
+}
+
+--[[
+return {
     -- Example, see data/weapons.lua for more detailed info/example
     Weapons = {
         -- Custom
@@ -23,3 +28,4 @@ return {
 		},
     }
 }
+]]--

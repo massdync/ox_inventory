@@ -1,4 +1,4 @@
-return {
+local data = {
 	Weapons = {
 		['WEAPON_BATTLERIFLE'] = {
 			label = 'Battle Rifle',
@@ -1878,3 +1878,27 @@ return {
 		},
 	}
 }
+
+local function insertWeapon(table, overwrite)
+	for weaponName, weaponData in pairs(table) do
+        if data.Weapons[weaponName] and not overwrite then
+            s = ('[ox_inventory] Duplicate WEAPON skipped: %s'):format(weaponName)
+			print(s)
+		else
+			data.Weapons[weaponName] = weaponData
+		end
+	end
+end
+
+-- wasabi_police_v2
+insertWeapon({
+	-- WARNING: THIS BELONGS IN DATA/WEAPONS.LUA
+	-- Place in data/weapons.lua
+	['WEAPON_RADARGUN'] = {
+		label = 'Radar Gun',
+		weight = 800,
+		durability = 0.1,
+	},
+})
+
+return data

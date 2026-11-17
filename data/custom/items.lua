@@ -1,4 +1,4 @@
-return {
+local items = {
     -- [[ Thomas police badge ]] --
     ['hkp'] = {
         label = '警察證件',
@@ -11,7 +11,8 @@ return {
         }
     },
 
-    -- [[ drugseed TEST items ]] --
+    --[[
+    -- drugseed TEST items
     ['weedseed'] = {
         label = '大麻種子 (測試)',
         weight = 1,
@@ -28,6 +29,7 @@ return {
         label = '丙酮 (測試)',
         weight = 1,
     },
+    ]]--
 
 	-- For debugging
 	['saratoga_water'] = {
@@ -49,3 +51,6 @@ return {
 		}
 	},
 }
+
+
+return items
