@@ -238,8 +238,7 @@ local function insert(source, overwrite)
     end
 end
 
--- wasabi_ambulance_v2
-insert({
+insert({ -- wasabi_ambulance_v2
     -- =====================================
     -- HEALING ITEMS (uses healingItems config)
     -- These can be used directly from inventory
@@ -365,8 +364,7 @@ insert({
     }
 })
 
--- wasabi_carlock
-insert({
+insert({	-- wasabi_carlock
     ["carkeys"] = { -- Skip this if carkeys already exists in items.lua.
         label = 'Car Keys',
         description = 'Keys to a vehicle.',
@@ -394,7 +392,7 @@ insert({
     },
 })
 
-insert({
+insert({	-- wasabi_police_v2 (?)
 	-- Cuffing
 	["handcuffs"] = {
 		label = 'Handcuffs',
@@ -587,8 +585,7 @@ insert({
 	},
 })
 
--- wasabi_crutch
-insert({
+insert({	-- wasabi_crutch
     ["crutch"] = {
         ["name"] = "crutch",
         ["label"] = "Crutch",
@@ -615,8 +612,7 @@ insert({
     }
 })
 
--- fishing_simulator
-insert({
+insert({	-- fishing_simulator
 	-- Bait
 	["bread"] = {
 		label = "Bread",
@@ -2502,8 +2498,7 @@ insert({
 	},
 })
 
--- FiveCode - Tequila Job
-insert({
+insert({	-- FiveCode Tequila Job
 	-- Other
 	['tk_ticket'] = {
 		label = 'Ticket - Tequi-la-la',
@@ -2853,8 +2848,7 @@ insert({
 	}
 })
 
--- FiveCode - BurgerShot Job
-insert({
+insert({	-- FiveCode - BurgerShot Job
 	-- Other
     ['salt'] = {
         label = 'Salt',
@@ -3376,8 +3370,7 @@ insert({
     },
 })
 
--- FiveCode - UwU Cafe
-insert({
+insert({	-- FiveCode - UwU Cafe
 -- Other
     ['uwu_cleansponge'] = {
         label = 'Clean Sponge',
@@ -3945,8 +3938,7 @@ insert({
     },
 })
 
--- FiveCode - Unicorn
-insert({
+insert({	-- FiveCode - Unicorn
 	-- Other
 	['vu_ticket'] = {
 		label = 'Ticket - Vanilla Unicorn',
@@ -4337,7 +4329,7 @@ insert({
 	},
 })
 
-insert({
+insert({	-- ???? idk i forgot :<
     ['sludgie'] = {
         name = 'sludgie',
         label = 'Sludgie',
@@ -4460,8 +4452,7 @@ insert({
     },
 })
 
--- JG mechanic
-insert({
+insert({	-- JG mechanic
 	-- Servicing Items
 	["engine_oil"] = {
 		label = "Engine Oil",
@@ -4655,8 +4646,7 @@ insert({
 	},
 })
 
--- okokPhone
-insert({
+insert({	-- okokPhone
 	['okokphone'] = {
 			label = 'Phone',
 			weight = 190,
@@ -4677,8 +4667,7 @@ insert({
 		},
 })
 
--- okokGarage
-insert({
+insert({	-- okokGarage
 	['keys'] = {
 		label = 'Car Keys',
 		weight = 1,
@@ -4691,8 +4680,7 @@ insert({
 	},
 })
 
--- quasarHousing
-insert({
+insert({	-- quasarHousing
 	['housekey'] = {
 		label = 'House Key',
 		weight = 100,
