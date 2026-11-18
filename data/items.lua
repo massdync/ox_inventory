@@ -136,10 +136,13 @@ local items = {
 		}
 	},
 
+	--[[
+	-- Duplicated with qs-housing
 	['lockpick'] = {
 		label = 'Lockpick',
 		weight = 160,
 	},
+	]]--
 
 	['phone'] = {
 		label = 'Phone',
