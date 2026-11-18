@@ -144,6 +144,8 @@ local items = {
 	},
 	]]--
 
+	--[[
+	-- Not needed since there's okokPhone
 	['phone'] = {
 		label = 'Phone',
 		weight = 190,
@@ -163,6 +165,7 @@ local items = {
 			end
 		}
 	},
+	]]--
 
 	['money'] = {
 		label = 'Money',
