@@ -4698,4 +4698,67 @@ insert({	-- quasarHousing
 	['pet_water'] = { label = 'Pet Water', weight = 200, stack = true },
 })
 
+insert({	-- lunar_robbery
+	['ring'] = {
+		label = 'Ring',
+		description = "A stunning diamond ring!",
+		weight = 50,
+		stack = true
+	},
+
+	['bracelet'] = {
+		label = 'Bracelet',
+		description = "A wonderful bracelet",
+		weight = 100,
+		stack = true
+	},
+
+	['watch'] = {
+		label = 'Expensive watch',
+		description = "A luxurious watch",
+		weight = 200,
+		stack = true
+	},
+
+	['usb_drive'] = {
+		label = 'USB drive',
+		description = "An USB drive, might be good for hacking?",
+		weight = 200,
+		stack = false
+	},
+
+	['monitor'] = {
+		label = 'Monitor',
+		description = "An used monitor",
+		weight = 750,
+		stack = true
+	},
+
+	['keyboard'] = {
+		label = 'Keyboard',
+		description = "An used keyboard",
+		weight = 300,
+		stack = true
+	},
+
+	['laptop'] = {
+		label = 'Laptop',
+		description = "An used laptop",
+		weight = 1000,
+		stack = true
+	},
+
+	['bong'] = {
+		label = 'Bong',
+		weight = 200,
+		stack = true
+	},
+
+	['microwave'] = {
+		label = 'Microwave',
+		weight = 1000,
+		stack = true
+	},
+})
+
 return items
