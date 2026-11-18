@@ -4691,4 +4691,20 @@ insert({
 	},
 })
 
+-- quasarHousing
+insert({
+	['housekey'] = {
+		label = 'House Key',
+		weight = 100,
+		stack = false,
+		close = true,
+		description = 'Your house key, do not lose it.',
+		server = { export = 'qs-housing.useHouseKey' },
+	},
+	['lockpick'] = { label = 'Lockpick', weight = 100, stack = true },
+	['police_stormram'] = { label = 'Police Storm Ram', weight = 800, stack = false },
+	['pet_food'] = { label = 'Pet Food', weight = 200, stack = true },
+	['pet_water'] = { label = 'Pet Water', weight = 200, stack = true },
+})
+
 return items
