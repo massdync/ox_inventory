@@ -4655,4 +4655,40 @@ insert({
 	},
 })
 
+-- okokPhone
+insert({
+	['okokphone'] = {
+			label = 'Phone',
+			weight = 190,
+			stack = false,
+			consume = 0,
+			server = {
+					export = "okokPhone.oxOpenPhone"
+			}
+	},
+	['simcard'] = {
+				label = 'Sim Card',
+				weight = 1,
+				stack = false,
+				consume = 0,
+				server = {
+					export = "okokPhone.oxUseSimCard"
+				}
+		},
+})
+
+-- okokGarage
+insert({
+	['keys'] = {
+		label = 'Car Keys',
+		weight = 1,
+		stack = false,
+		close = false,
+		description = "Car Keys",
+		server = {
+			export = 'okokGarage.lockvehicle',
+		},
+	},
+})
+
 return items
