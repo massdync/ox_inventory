@@ -139,6 +139,7 @@ end
 
 loadItems(lib.load('data.items'))
 loadItems(lib.load('data.custom.items'))
+loadItems(lib.load('data.custom.items_lunar'))
 
 
 --------------------------------------------------

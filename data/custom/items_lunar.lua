@@ -1,0 +1,298 @@
+--[[
+	lunar_heistcontracts items OVERWRITES lunar_robbery's items
+]]--
+
+local items = {}
+
+local function insert(source, overwrite)
+    for itemName, itemData in pairs(source) do
+        if items[itemName] and not overwrite then
+            s = ('[ox_inventory] Duplicate ITEM skipped: %s'):format(itemName)
+			print(s)
+        else
+            items[itemName] = itemData
+        end
+    end
+end
+
+insert({	-- lunar_robbery
+	['ring'] = {
+		label = 'Ring',
+		description = "A stunning diamond ring!",
+		weight = 50,
+		stack = true
+	},
+
+	['bracelet'] = {
+		label = 'Bracelet',
+		description = "A wonderful bracelet",
+		weight = 100,
+		stack = true
+	},
+
+	['watch'] = {
+		label = 'Expensive watch',
+		description = "A luxurious watch",
+		weight = 200,
+		stack = true
+	},
+
+	['usb_drive'] = {
+		label = 'USB drive',
+		description = "An USB drive, might be good for hacking?",
+		weight = 200,
+		stack = false
+	},
+
+	['monitor'] = {
+		label = 'Monitor',
+		description = "An used monitor",
+		weight = 750,
+		stack = true
+	},
+
+	['keyboard'] = {
+		label = 'Keyboard',
+		description = "An used keyboard",
+		weight = 300,
+		stack = true
+	},
+
+	['laptop'] = {
+		label = 'Laptop',
+		description = "An used laptop",
+		weight = 1000,
+		stack = true
+	},
+
+	['bong'] = {
+		label = 'Bong',
+		weight = 200,
+		stack = true
+	},
+
+	['microwave'] = {
+		label = 'Microwave',
+		weight = 1000,
+		stack = true
+	},
+})
+
+insert({	-- lunar_heistcontracts
+	['blue_keycard'] = {
+		label = 'Blue Keycard',
+		weight = 100,
+		stack = false
+	},
+
+	['purple_keycard'] = {
+		label = 'Purple Keycard',
+		weight = 100,
+		stack = false
+	},
+
+	['hack_usb'] = {
+		label = 'Phantom USB',
+		weight = 100,
+		stack = false
+	},
+
+	['hack_card'] = {
+		label = 'Spoofing Card',
+		weight = 100,
+		stack = false
+	},
+
+	['coins'] = {
+		label = 'Coins',
+		weight = 10,
+	},
+
+	['painting'] = {
+		label = 'Painting',
+		weight = 100,
+	},
+
+	['bomb_c4'] = {
+		label = 'C4 Explosive',
+		weight = 3000,
+	},
+
+	['angle_grinder'] = {
+		label = 'Angle Grinder',
+		weight = 1500,
+	},
+
+	['contracts_tablet'] = {
+		label = 'Contract Tablet',
+		stack = false,
+		weight = 400,
+	},
+
+	['classified_docs'] = {
+		label = 'Classified Documents',
+		weight = 100,
+	},
+
+	['diamond_necklace'] = {
+		label = 'Diamond Necklace',
+		weight = 100,
+	},
+
+	['diamonds_box'] = {
+		label = 'Diamonds Box',
+		weight = 200,
+	},
+
+	['luxurious_watch'] = {
+		label = 'Luxurious Watch',
+		weight = 200,
+	},
+
+	['rare_coins'] = {
+		label = 'Rare Coins',
+		weight = 500,
+	},
+
+	['diamond_ring'] = {
+		label = 'Diamond Ring',
+		weight = 50,
+	},
+
+	['thermite'] = {
+		label = 'Thermite',
+		weight = 350,
+	},
+
+	['gold_bar'] = {
+		label = 'Gold Bar',
+		weight = 500,
+	},
+
+	["large_drill"] = {
+		label = "Large Drill",
+		weight = 12500,
+		stack = true,
+		close = true,
+	},
+
+	['casino_keycard'] = {
+		label = 'Casino Keycard',
+		weight = 100,
+		stack = false
+	},
+
+	["small_drill"] = {
+		label = "Small Drill",
+		weight = 2000,
+		stack = true,
+		close = true,
+	},
+
+	['explosives'] = {
+		label = 'Explosives',
+		weight = 3000,
+	},
+
+	['tv'] = {
+		label = 'Television',
+		weight = 12500,
+		stack = true,
+	},
+
+	['microwave'] = {
+		label = 'Microwave',
+		weight = 7500,
+		stack = true,
+	},
+
+	['monitor'] = {
+		label = 'Computer Monitor',
+		weight = 5000,
+		stack = true,
+	},
+
+	['printer'] = {
+		label = 'Printer',
+		weight = 10000,
+		stack = true,
+	},
+
+	['flat_tv'] = {
+		label = 'Flat Screen TV',
+		weight = 12500,
+		stack = true,
+	},
+
+	['old_tv'] = {
+		label = 'Old TV',
+		weight = 12500,
+		stack = true,
+	},
+
+	['dj_deck'] = {
+		label = 'DJ Deck',
+		weight = 7500,
+		stack = true,
+	},
+
+	['console'] = {
+		label = 'Gaming Console',
+		weight = 3000,
+		stack = true,
+	},
+
+	['keyboard'] = {
+		label = 'Keyboard',
+		weight = 500,
+		stack = true,
+	},
+
+	['laptop'] = {
+		label = 'Laptop',
+		weight = 2500,
+		stack = true,
+	},
+
+	['bong'] = {
+		label = 'Bong',
+		weight = 1000,
+		stack = true,
+	},
+
+	['meth_bag'] = {
+		label = 'Meth Bag',
+		weight = 50,
+		stack = true,
+	},
+
+	['coke_brick'] = {
+		label = 'Coke Brick',
+		weight = 200,
+		stack = true,
+	},
+
+	['weed_brick'] = {
+		label = 'Weed Brick',
+		weight = 200,
+		stack = true,
+	},
+
+	['pink_diamond'] = {
+		label = 'Pink Diamond',
+		weight = 100,
+	},
+
+	['rare_tequila'] = {
+		label = 'Rare Tequila',
+		weight = 300,
+	},
+
+	['plasma_cutter'] = {
+		label = 'Plasma cutter',
+		weight = 1000,
+		stack = true,
+	},
+}, true)
+
+return items
