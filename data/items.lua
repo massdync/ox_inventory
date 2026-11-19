@@ -148,28 +148,12 @@ local items = {
 	},
 	]]--
 
-	--[[
-	-- Not needed since there's okokPhone
-	['phone'] = {
-		label = 'Phone',
+	["phone"] = {
+		label = "Phone",
 		weight = 190,
 		stack = false,
-		consume = 0,
-		client = {
-			add = function(total)
-				if total > 0 then
-					pcall(function() return exports.npwd:setPhoneDisabled(false) end)
-				end
-			end,
-
-			remove = function(total)
-				if total < 1 then
-					pcall(function() return exports.npwd:setPhoneDisabled(true) end)
-				end
-			end
-		}
+		consume = 0
 	},
-	]]--
 
 	['money'] = {
 		label = 'Money',
@@ -4656,6 +4640,7 @@ insert({	-- JG mechanic
 	},
 })
 
+--[[
 insert({	-- okokPhone
 	['okokphone'] = {
 			label = 'Phone',
@@ -4676,6 +4661,7 @@ insert({	-- okokPhone
 				}
 		},
 })
+]]--
 
 insert({	-- okokGarage
 	['keys'] = {
