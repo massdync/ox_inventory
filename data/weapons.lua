@@ -1907,4 +1907,11 @@ insertWeapon({	-- lunar_heistcontract
 	},
 })
 
+insertWeapon({	-- lunar_drugscreator
+	['WEAPON_HACKINGDEVICE'] = {
+		label = 'Plant Scanner',
+		weight = 1200,
+	},
+})
+
 return data
