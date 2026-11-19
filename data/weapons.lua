@@ -1890,14 +1890,20 @@ local function insertWeapon(table, overwrite)
 	end
 end
 
--- wasabi_police_v2
-insertWeapon({
+insertWeapon({	-- wasabi_police_v2
 	-- WARNING: THIS BELONGS IN DATA/WEAPONS.LUA
 	-- Place in data/weapons.lua
 	['WEAPON_RADARGUN'] = {
 		label = 'Radar Gun',
 		weight = 800,
 		durability = 0.1,
+	},
+})
+
+insertWeapon({	-- lunar_heistcontract
+	['WEAPON_DIGISCANNER'] = {
+		label = 'Signal booster',
+		weight = 1200,
 	},
 })
 

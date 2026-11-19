@@ -1,5 +1,15 @@
 return {
+	Weapons = {
 
+	},
+
+	Components = {
+
+	},
+
+	Ammo = {
+
+	}
 }
 
 --[[
