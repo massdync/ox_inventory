@@ -4691,4 +4691,16 @@ insert({	-- quasarHousing
 	['pet_water'] = { label = 'Pet Water', weight = 200, stack = true },
 })
 
+insert({	-- lb-tablet
+	["tablet"] = {
+		label = "Tablet",
+		weight = 840,
+		stack = false,
+		consume = 0,
+		client = {
+			event = "tablet:toggleOpen"
+		}
+	},
+})
+
 return items
