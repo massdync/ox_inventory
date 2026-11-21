@@ -1,10 +1,10 @@
 --[[
-	Items from lunar script is in custom/items_lunar.lua
+	Lunar 腳本的相關物品存放於 custom/items_lunar.lua
 ]]--
 
 local items = {
 	['testburger'] = {
-		label = 'Test Burger',
+		label = '測試漢堡包',
 		weight = 220,
 		degrade = 60,
 		client = {
@@ -21,34 +21,34 @@ local items = {
 		},
 		buttons = {
 			{
-				label = 'Lick it',
+				label = '舔一口',
 				action = function(slot)
 					print('You licked the burger')
 				end
 			},
 			{
-				label = 'Squeeze it',
+				label = '捏扁它',
 				action = function(slot)
 					print('You squeezed the burger :(')
 				end
 			},
 			{
-				label = 'What do you call a vegan burger?',
-				group = 'Hamburger Puns',
+				label = '素食漢堡叫什麼？',
+				group = '漢堡冷笑話',
 				action = function(slot)
 					print('A misteak.')
 				end
 			},
 			{
-				label = 'What do frogs like to eat with their hamburgers?',
-				group = 'Hamburger Puns',
+				label = '青蛙吃漢堡喜歡配什麼？',
+				group = '漢堡冷笑話',
 				action = function(slot)
 					print('French flies.')
 				end
 			},
 			{
-				label = 'Why were the burger and fries running?',
-				group = 'Hamburger Puns',
+				label = '為什麼漢堡和薯條在跑步？',
+				group = '漢堡冷笑話',
 				action = function(slot)
 					print('Because they\'re fast food.')
 				end
@@ -58,9 +58,9 @@ local items = {
 	},
 
 	--[[
-	-- Duplicated with `wasabi_ambulance_v2`
+	-- 與 `wasabi_ambulance_v2` 重複，已停用
 	['bandage'] = {
-		label = 'Bandage',
+		label = '繃帶',
 		weight = 115,
 		client = {
 			anim = { dict = 'missheistdockssetup1clipboard@idle_a', clip = 'idle_a', flag = 49 },
@@ -72,35 +72,35 @@ local items = {
 	]]--
 
 	['black_money'] = {
-		label = 'Dirty Money',
+		label = '黑錢',
 	},
 
 	['burger'] = {
-		label = 'Burger',
+		label = '漢堡包',
 		weight = 220,
 		client = {
 			status = { hunger = 200000 },
 			anim = 'eating',
 			prop = 'burger',
 			usetime = 2500,
-			notification = 'You ate a delicious burger'
+			notification = '你吃了一個美味的漢堡包'
 		},
 	},
 
 	['sprunk'] = {
-		label = 'Sprunk',
+		label = '雪碧（Sprunk）',
 		weight = 350,
 		client = {
 			status = { thirst = 200000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `prop_ld_can_01`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
 			usetime = 2500,
-			notification = 'You quenched your thirst with a sprunk'
+			notification = '你喝了一罐雪碧解渴'
 		}
 	},
 
 	['parachute'] = {
-		label = 'Parachute',
+		label = '降落傘',
 		weight = 8000,
 		stack = false,
 		client = {
@@ -110,11 +110,11 @@ local items = {
 	},
 
 	['garbage'] = {
-		label = 'Garbage',
+		label = '垃圾',
 	},
 
 	['paperbag'] = {
-		label = 'Paper Bag',
+		label = '紙袋',
 		weight = 1,
 		stack = false,
 		close = false,
@@ -122,14 +122,14 @@ local items = {
 	},
 
 	['identification'] = {
-		label = 'Identification',
+		label = '身分證明文件',
 		client = {
 			image = 'card_id.png'
 		}
 	},
 
 	['panties'] = {
-		label = 'Knickers',
+		label = '女裝內褲',
 		weight = 10,
 		consume = 0,
 		client = {
@@ -141,38 +141,38 @@ local items = {
 	},
 
 	--[[
-	-- Duplicated with qs-housing
+	-- 與 qs-housing 重複，已停用
 	['lockpick'] = {
-		label = 'Lockpick',
+		label = '開鎖工具',
 		weight = 160,
 	},
 	]]--
 
 	["phone"] = {
-		label = "Phone",
+		label = "手提電話",
 		weight = 190,
 		stack = false,
 		consume = 0
 	},
 
 	['money'] = {
-		label = 'Money',
+		label = '現金',
 	},
 
 	['mustard'] = {
-		label = 'Mustard',
+		label = '黃芥末醬',
 		weight = 500,
 		client = {
 			status = { hunger = 25000, thirst = 25000 },
 			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
 			prop = { model = `prop_food_mustard`, pos = vec3(0.01, 0.0, -0.07), rot = vec3(1.0, 1.0, -1.5) },
 			usetime = 2500,
-			notification = 'You.. drank mustard'
+			notification = '你……竟然直接喝了黃芥末醬'
 		}
 	},
 
 	['water'] = {
-		label = 'Water',
+		label = '樽裝水',
 		weight = 500,
 		client = {
 			status = { thirst = 200000 },
@@ -180,14 +180,14 @@ local items = {
 			prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
 			usetime = 2500,
 			cancel = true,
-			notification = 'You drank some refreshing water'
+			notification = '你喝了一瓶清涼的樽裝水'
 		}
 	},
 
 	--[[
-	-- Replaced by mm_radio
+	-- 已由 mm_radio 取代
 	['radio'] = {
-		label = 'Radio',
+		label = '對講機',
 		weight = 1000,
 		stack = false,
 		allowArmed = true
@@ -195,7 +195,7 @@ local items = {
 	]]--
 
 	['armour'] = {
-		label = 'Bulletproof Vest',
+		label = '防彈背心',
 		weight = 3000,
 		stack = false,
 		client = {
@@ -205,12 +205,12 @@ local items = {
 	},
 
 	['clothing'] = {
-		label = 'Clothing',
+		label = '服裝',
 		consume = 0,
 	},
 
 	['mastercard'] = {
-		label = 'Fleeca Card',
+		label = '全福銀行提款卡',
 		stack = false,
 		weight = 10,
 		client = {
@@ -219,7 +219,7 @@ local items = {
 	},
 
 	['scrapmetal'] = {
-		label = 'Scrap Metal',
+		label = '廢金屬',
 		weight = 80,
 	},
 }
@@ -237,62 +237,62 @@ end
 
 insert({ -- wasabi_ambulance_v2
     -- =====================================
-    -- HEALING ITEMS (uses healingItems config)
-    -- These can be used directly from inventory
-    -- Wasabi Advanced Ambulance Job V2
+    -- 治療物品（對應 healingItems 設定）
+    -- 可直接從背包中使用
+    -- Wasabi 進階救護職業系統 V2
     -- =====================================
-    ["bandage"] = {      -- Make sure no duplicates exist in the original items.lua
-        label = 'Bandage',
-        description = 'A simple bandage to stop minor bleeding',
+    ["bandage"] = {      -- 請確保原版 items.lua 中沒有重複定義
+        label = '繃帶',
+        description = '用於止住輕微出血的簡易醫用繃帶',
         weight = 25,
         server = {
             export = "wasabi_ambulance_v2.bandage"
         }
     },
     ["medkit"] = {
-        label = 'Med-Kit',
-        description = 'A medical kit for treating injuries',
+        label = '醫療包',
+        description = '用於處理各類傷勢的醫用急救包',
         weight = 250,
         server = {
             export = "wasabi_ambulance_v2.medkit"
         }
     },
     ["firstaidkit"] = {
-        label = 'First Aid Kit',
-        description = 'A comprehensive first aid kit for serious injuries',
+        label = '急救箱',
+        description = '配備齊全的綜合急救箱，適用於處理嚴重傷勢',
         weight = 350,
         server = {
             export = "wasabi_ambulance_v2.firstaidkit"
         }
     },
     ["painkillers"] = {
-        label = 'Painkillers',
-        description = 'Pills to temporarily relieve pain and reduce stun effects',
+        label = '止痛藥',
+        description = '可暫時舒緩疼痛並減輕暈眩效果的藥丸',
         weight = 10,
         server = {
             export = "wasabi_ambulance_v2.painkillers"
         }
     },
     ["ifak"] = {
-        label = 'IFAK',
-        description = 'Individual First Aid Kit',
+        label = '個人急救包（IFAK）',
+        description = '戰術及緊急救援專用的單兵個人急救包',
         weight = 150,
         server = {
             export = "wasabi_ambulance_v2.ifak"
         }
     },
     ["sedative"] = {
-        label = 'Sedative',
-        description = 'A controlled sedative for EMS use',
+        label = '鎮靜劑',
+        description = '供救護員使用的受管制鎮靜藥物',
         weight = 25,
-        consume = 0, -- Sedation removes this server-side after the action completes.
+        consume = 0, -- 施用動作完成後由伺服器端自動扣除。
         server = {
             export = "wasabi_ambulance_v2.sedative"
         }
     },
     ["defibrillator"] = {
-        label = 'Defibrillator',
-        description = 'A reusable defibrillator for reviving downed patients',
+        label = '心臟除顫器（AED）',
+        description = '可重複使用的自動體外心臟除顫器，用於搶救倒地昏迷傷者',
         weight = 2500,
         stack = false,
         close = true,
@@ -303,54 +303,54 @@ insert({ -- wasabi_ambulance_v2
     },
 
     -- =====================================
-    -- MEDICAL TREATMENT ITEMS (uses medicalItems config)
-    -- These are used via the inspection UI by dragging onto limbs
-    -- They do NOT have exports - the UI system handles their usage
-    -- Wasabi Advanced Ambulance
+    -- 專科傷勢處理器材（對應 medicalItems 設定）
+    -- 需於傷勢檢查介面中拖放至對應受傷部位使用
+    -- 無需設定 export —— 由傷勢介面系統自動處理消耗
+    -- Wasabi 進階救護職業系統
     -- =====================================
     ["forceps"] = {
-        label = 'Forceps',
-        description = 'Used to treat gunshot wounds',
+        label = '手術鉗',
+        description = '用於取出彈頭及處理槍傷',
         weight = 100,
     },
     ["pliers"] = {
-        label = 'Pliers',
-        description = 'Used to treat taser prong wounds',
+        label = '拔針鉗',
+        description = '用於拔除電槍電極針及處理電擊傷',
         weight = 25,
     },
     ["suture"] = {
-        label = 'Suture',
-        description = 'Used to treat cuts',
+        label = '縫合針線',
+        description = '用於縫合割傷及裂傷傷口',
         weight = 25,
     },
     ["splint"] = {
-        label = 'Splint',
-        description = 'Used to treat broken bones',
+        label = '固定夾板',
+        description = '用於固定骨折部位',
         weight = 50,
     },
     ["icepack"] = {
-        label = 'Ice Pack',
-        description = 'Used to treat punches and bruises',
+        label = '冰敷袋',
+        description = '用於冷敷處理拳擊傷及瘀腫',
         weight = 25,
     },
     ["traumakit"] = {
-        label = 'Trauma Kit',
-        description = 'Used to treat blunt force trauma',
+        label = '創傷急救包',
+        description = '用於處理鈍器撞擊造成的創傷',
         weight = 75,
     },
     ["burncream"] = {
-        label = 'Burn Cream',
-        description = 'Used to treat burns',
+        label = '燒傷藥膏',
+        description = '用於塗抹及治療燒傷與燙傷',
         weight = 10,
     },
 
     -- =====================================
-    -- EQUIPMENT ITEMS
-    -- Wasabi Advanced Ambulance
+    -- 醫療設備物品
+    -- Wasabi 進階救護職業系統
     -- =====================================
     ["medbag"] = {
-        label = 'Medbag',
-        description = 'A portable medical bag containing supplies',
+        label = '急救醫療箱',
+        description = '內含多種急救物資的手提醫療箱',
         weight = 50,
         stack = false,
         close = true,
@@ -361,10 +361,10 @@ insert({ -- wasabi_ambulance_v2
     }
 })
 
-insert({	-- wasabi_carlock
-    ["carkeys"] = { -- Skip this if carkeys already exists in items.lua.
-        label = 'Car Keys',
-        description = 'Keys to a vehicle.',
+insert({	-- wasabi_carlock 車鎖系統
+    ["carkeys"] = { -- 若 items.lua 中已存在 carkeys，請略過此項。
+        label = '車匙',
+        description = '車輛的實體鑰匙。',
         weight = 100,
         stack = false,
         close = true,
@@ -372,8 +372,8 @@ insert({	-- wasabi_carlock
         server = { export = 'wasabi_carlock.useKeyItem' },
     },
     ["carkey_fob"] = {
-        label = 'Car Key Fob',
-        description = 'An electronic key fob for a vehicle.',
+        label = '智能遙控車匙',
+        description = '車輛的電子遙控鑰匙。',
         weight = 100,
         stack = false,
         close = true,
@@ -381,211 +381,211 @@ insert({	-- wasabi_carlock
         server = { export = 'wasabi_carlock.useKeyItem' },
     },
     ["flapper_device"] = {
-        label = 'Flapper Device',
-        description = 'An electronic interface for bypassing vehicle security systems.',
+        label = '汽車防盜破解器',
+        description = '用於繞過車輛電子防盜系統的破解裝置。',
         weight = 750,
         stack = true,
         close = true,
     },
 })
 
-insert({	-- wasabi_police_v2 (?)
-	-- Cuffing
+insert({	-- wasabi_police_v2 警務系統
+	-- 手銬與束縛工具
 	["handcuffs"] = {
-		label = 'Handcuffs',
+		label = '手銬',
 		weight = 500,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Standard police handcuffs.',
+		description = '警用標準制式手銬。',
 		server = { export = 'wasabi_police_v2.handcuffs' },
 	},
 	["cuff_key"] = {
-		label = 'Cuff Key',
+		label = '手銬鑰匙',
 		weight = 50,
 		stack = true,
 		close = true,
 		consume = 0,
-		description = 'Key for standard handcuffs.',
+		description = '用於開啟標準手銬的鑰匙。',
 		server = { export = 'wasabi_police_v2.cuff_key' },
 	},
 	["ziptie"] = {
-		label = 'Zip Tie',
+		label = '索帶',
 		weight = 50,
 		stack = true,
 		close = true,
 		consume = 0,
-		description = 'Single-use zip tie restraint.',
+		description = '一次性使用的尼龍束縛索帶。',
 		server = { export = 'wasabi_police_v2.ziptie' },
 	},
 	["bolt_cutter"] = {
-		label = 'Bolt Cutter',
+		label = '斷線鉗（大剪鉗）',
 		weight = 2000,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Cuts handcuffs by force.',
+		description = '可強行剪斷金屬手銬的重型剪鉗。',
 		server = { export = 'wasabi_police_v2.bolt_cutter' },
 	},
 	["tracking_bracelet_cutter"] = {
-		label = 'Bracelet Cutter',
+		label = '追蹤腳鐐破壞鉗',
 		weight = 500,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Cuts tracking bracelets by force.',
+		description = '可強行剪斷電子追蹤腳鐐的專用工具。',
 		server = { export = 'wasabi_police_v2.tracking_bracelet_cutter' },
 	},
 	["flush_cutter"] = {
-		label = 'Flush Cutter',
+		label = '斜口剪鉗',
 		weight = 100,
 		stack = true,
 		close = true,
 		consume = 0,
-		description = 'Cuts zip ties.',
+		description = '用於剪斷尼龍索帶的小型剪鉗。',
 		server = { export = 'wasabi_police_v2.flush_cutter' },
 	},
 	["soft_cuffs"] = {
-		label = 'Soft Cuffs',
+		label = '軟質手銬',
 		weight = 200,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Soft front restraints.',
+		description = '雙手拷於身前的軟質束縛帶。',
 	},
 
-	-- Evidence
+	-- 證物與鑑證
 	["empty_evidence_bag"] = {
-		label = 'Evidence Bag',
+		label = '空白證物袋',
 		weight = 100,
 		stack = true,
 		close = true,
 		consume = 0,
-		description = 'Empty evidence bag for collecting samples.',
+		description = '用於採集及封存現場證物樣本的空白證物袋。',
 	},
 	["evidence_bag_full"] = {
-		label = 'Evidence Bag (Full)',
+		label = '已封存證物袋',
 		weight = 150,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Evidence bag containing collected samples.',
+		description = '內含已採集證物樣本的密封證物袋。',
 		server = { export = 'wasabi_police_v2.evidence_bag_full' },
 	},
 	["bleachwipes"] = {
-		label = 'Bleach Wipes', 
+		label = '漂白濕紙巾', 
 		weight = 100, 
 		stack = true, 
 		close = true, 
 		consume = 0,
-		description = 'Used through the Clean Blood target interaction.',
+		description = '配合「清理血跡證物」目標互動使用，可抹除現場血跡。',
 	},
 	["uvlight"] = {
-		label = 'UV Light',
+		label = '紫外光燈（UV 燈）',
 		weight = 200,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Scans vehicle steering wheels for fingerprints.',
+		description = '用於掃描車輛軚盤上的殘留指紋。',
 		server = { export = 'wasabi_police_v2.uvlight' },
 	},
 
-	-- Equipment (usable)
+	-- 警用裝備（可主動使用）
 	["breathalyzer"] = {
-		label = 'Breathalyzer',
+		label = '酒精呼氣測試儀',
 		weight = 200,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Tests blood alcohol content.',
+		description = '用於檢測駕駛者的血液酒精濃度。',
 		server = { export = 'wasabi_police_v2.breathalyzer' },
 	},
 
 	["radar_post"] = {
-		label = 'Radar Post',
+		label = '便攜式超速偵察器',
 		weight = 1500,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Deployable automated speed radar.',
+		description = '可部署於路邊的自動雷達測速攝影機。',
 		server = { export = 'wasabi_police_v2.radar_post' },
 	},
 	["spike_strip"] = {
-		label = 'Spike Strip',
+		label = '破胎刺帶',
 		weight = 2000,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Deflates tires on contact.',
+		description = '部署於路面，車輛輾過時會刺穿輪胎。',
 		server = { export = 'wasabi_police_v2.spike_strip' },
 	},
 	["bodycam"] = {
-		label = 'Body Camera',
+		label = '隨身攝錄機（BodyCam）',
 		weight = 300,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Records officer interactions.',
+		description = '用於錄製警員執勤期間的隨身影像紀錄。',
 		server = { export = 'wasabi_police_v2.bodycam' },
 	},
 	["cctv_camera"] = {
-		label = 'CCTV Camera',
+		label = '閉路電視鏡頭',
 		weight = 500,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Deployable surveillance camera.',
+		description = '可安裝於牆面或柱上的遠端監控鏡頭。',
 		server = { export = 'wasabi_police_v2.cctv_camera' },
 	},
 
-	-- Equipment (passive / target-activated)
+	-- 警用裝備（被動／目標互動觸發）
 	["tracking_bracelet"] = {
-		label = 'Tracking Bracelet',
+		label = '電子追蹤腳鐐',
 		weight = 100,
 		stack = true,
 		close = true,
 		consume = 0,
-		description = 'GPS tracking bracelet.',
+		description = '可即時定位目標行蹤的 GPS 追蹤腳鐐。',
 		server = { export = 'wasabi_police_v2.tracking_bracelet' },
 	},
 	["police_cone"] = {
-		label = 'Traffic Cone',
+		label = '雪糕筒（交通錐）',
 		weight = 500,
 		stack = true,
 		close = true,
 		consume = 0,
-		description = 'Traffic control cone.',
+		description = '用於交通管制的反光雪糕筒。',
 	},
 	["police_barrier"] = {
-		label = 'Police Barrier',
+		label = '警用路障',
 		weight = 1000,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Road barrier.',
+		description = '用於封鎖道路的警用護欄路障。',
 	},
 	["gsr_kit"] = {
-		label = 'GSR Test Kit',
+		label = '硝煙反應測試套裝',
 		weight = 100,
 		stack = true,
 		close = true,
 		consume = 0,
-		description = 'Tests for gunshot residue.',
+		description = '用於檢測疑犯手部是否殘留開槍硝煙反應。',
 	},
 	["police_radio"] = {
-		label = 'Police Radio',
+		label = '警用加密對講機',
 		weight = 300,
 		stack = false,
 		close = true,
 		consume = 0,
-		description = 'Secure police radio.',
+		description = '警隊專用的加密通訊無線電對講機。',
 	},
 })
 
-insert({	-- wasabi_crutch
+insert({	-- wasabi_crutch 拐杖與輪椅系統
     ["crutch"] = {
         ["name"] = "crutch",
-        ["label"] = "Crutch",
+        ["label"] = "醫用拐杖",
         ["weight"] = 650,
         ["type"] = "item",
         ["image"] = "crutch.png",
@@ -593,11 +593,11 @@ insert({	-- wasabi_crutch
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A device used to assist with walking."
+        ["description"] = "協助腿部受傷人士步行支撐的醫用拐杖。"
     },
     ["wheelchair"] = {
         ["name"] = "wheelchair",
-        ["label"] = "Wheelchair",
+        ["label"] = "輪椅",
         ["weight"] = 850,
         ["type"] = "item",
         ["image"] = "wheelchair.png",
@@ -605,3827 +605,3827 @@ insert({	-- wasabi_crutch
         ["useable"] = true,
         ["shouldClose"] = true,
         ["combinable"] = nil,
-        ["description"] = "A device used to assist with mobility."
+        ["description"] = "協助行動不便人士代步的醫療輪椅。"
     }
 })
 
-insert({	-- fishing_simulator
-	-- Bait
+insert({	-- fishing_simulator 釣魚模擬器
+	-- 魚餌（Bait）
 	["bread"] = {
-		label = "Bread",
+		label = "麵包碎",
 		weight = 10,
-		stack = true, -- assuming 'unique' is false means it should be stackable
+		stack = true,
 		close = true,
-		description = "Bread",
+		description = "適合用來釣小型淡水魚的麵包餌。",
 		client = {
 			image = "bread.png",
 		}
 	},
 	
 	["earthworm"] = {
-		label = "Earthworm",
+		label = "蚯蚓",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Earthworm",
+		description = "鮮活的蚯蚓魚餌。",
 		client = {
 			image = "earthworm.png",
 		}
 	},
 	
 	["dough"] = {
-		label = "Dough",
+		label = "麵糰魚餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Dough",
+		description = "搓揉好的釣魚專用麵糰。",
 		client = {
 			image = "dough.png",
 		}
 	},
 	
 	["grub"] = {
-		label = "Grub",
+		label = "幼蟲餌（蟲蛆）",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Grub",
+		description = "肥美的甲蟲幼蟲魚餌。",
 		client = {
 			image = "grub.png",
 		}
 	},
 	
 	["caddis_fly"] = {
-		label = "Caddis Fly",
+		label = "石蠶蛾餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Caddis Fly",
+		description = "飛蠅釣常用的石蠶蛾水生昆蟲餌。",
 		client = {
 			image = "caddis_fly.png",
 		}
 	},
 	
 	["cheese"] = {
-		label = "Cheese",
+		label = "芝士塊",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Cheese",
+		description = "氣味濃郁的芝士魚餌。",
 		client = {
 			image = "cheese.png",
 		}
 	},
 	
 	["fly"] = {
-		label = "Fly",
+		label = "蒼蠅餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Fly",
+		description = "適合水面垂釣的昆蟲餌。",
 		client = {
 			image = "fly.png",
 		}
 	},
 	
 	["dragonfly"] = {
-		label = "Dragonfly",
+		label = "蜻蜓餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Dragonfly",
+		description = "吸引掠食性魚類的蜻蜓魚餌。",
 		client = {
 			image = "dragonfly.png",
 		}
 	},
 	
 	["grasshoper"] = {
-		label = "Grasshoper",
+		label = "草蜢餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Grasshoper",
+		description = "活蹦亂跳的草蜢魚餌。",
 		client = {
 			image = "grasshoper.png",
 		}
 	},
 	
 	["shrimp"] = {
-		label = "Shrimp",
+		label = "蝦仁餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Shrimp",
+		description = "海釣及磯釣極受歡迎的鮮蝦魚餌。",
 		client = {
 			image = "shrimp.png",
 		}
 	},
 	
 	["leech"] = {
-		label = "Leech",
+		label = "水蛭餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Leech",
+		description = "生命力頑強的水蛭魚餌。",
 		client = {
 			image = "leech.png",
 		}
 	},
 	
 	["snail"] = {
-		label = "Snail",
+		label = "田螺／蝸牛餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Snail",
+		description = "適合釣底棲魚類的螺肉魚餌。",
 		client = {
 			image = "snail.png",
 		}
 	},
 	
 	["liver"] = {
-		label = "Liver",
+		label = "動物肝臟餌",
 		weight = 10,
 		stack = true,
 		close = true,
-		description = "Liver",
+		description = "血腥味濃厚、專攻大型魚類的內臟魚餌。",
 		client = {
 			image = "liver.png",
 		}
 	},
-	-- Lines
+	-- 魚絲（Lines）
 	["express_fishing_super_line"] = {
-		label = "Express Super Line 0.1mm",
+		label = "Express 超強魚絲 0.1mm",
 		weight = 70,
-		stack = true, -- assuming 'unique' is false means it should be stackable
+		stack = true,
 		close = true,
-		description = "Express Super Line 0.1mm",
+		description = "線徑 0.1mm 的超細高拉力魚絲。",
 		client = {
 			image = "express_fishing_super_line.png",
 		}
 	},
 	
 	["syberia_indiana_green"] = {
-		label = "Indiana Green 0.14mm",
+		label = "Indiana 綠色魚絲 0.14mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Indiana Green 0.14mm",
+		description = "線徑 0.14mm 的綠色隱形魚絲。",
 		client = {
 			image = "syberia_indiana_green.png",
 		}
 	},
 	
 	["syberia_indiana_white"] = {
-		label = "Indiana White 0.18mm",
+		label = "Indiana 白色魚絲 0.18mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Indiana White 0.18mm",
+		description = "線徑 0.18mm 的白色魚絲。",
 		client = {
 			image = "syberia_indiana_white.png",
 		}
 	},
 	
 	["simmons_mono_original"] = {
-		label = "Simmons Original 0.25mm",
+		label = "Simmons 原廠單絲魚線 0.25mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Simmons Original 0.25mm",
+		description = "線徑 0.25mm 的耐用單絲尼龍魚線。",
 		client = {
 			image = "simmons_mono_original.png",
 		}
 	},
 	
 	["simmons_mono_ss"] = {
-		label = "Simmons SS 0.28mm",
+		label = "Simmons SS 單絲魚線 0.28mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Simmons SS 0.28mm",
+		description = "線徑 0.28mm 的強化單絲魚線。",
 		client = {
 			image = "simmons_mono_ss.png",
 		}
 	},
 	
 	["syberia_indiana_green_2"] = {
-		label = "Indiana Green 0.32mm",
+		label = "Indiana 綠色魚絲 0.32mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Indiana Green 0.32mm",
+		description = "線徑 0.32mm 的加粗綠色魚絲。",
 		client = {
 			image = "syberia_indiana_green_2.png",
 		}
 	},
 	
 	["syberia_indiana_white_2"] = {
-		label = "Indiana White 0.36mm",
+		label = "Indiana 白色魚絲 0.36mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Indiana White 0.36mm",
+		description = "線徑 0.36mm 的加粗白色魚絲。",
 		client = {
 			image = "syberia_indiana_white_2.png",
 		}
 	},
 	
 	["snake_power_line_clr"] = {
-		label = "Snake Power Line 0.41mm",
+		label = "Snake 強力透明魚絲 0.41mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Snake Power Line 0.41mm",
+		description = "線徑 0.41mm 的高強度透明魚絲。",
 		client = {
 			image = "snake_power_line_clr.png",
 		}
 	},
 	
 	["simmons_mono_original_2"] = {
-		label = "Simmons Original 0.48mm",
+		label = "Simmons 原廠單絲魚線 0.48mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Simmons Original 0.48mm",
+		description = "線徑 0.48mm 的重型單絲魚線。",
 		client = {
 			image = "simmons_mono_original_2.png",
 		}
 	},
 	
 	["simmons_mono_ss_2"] = {
-		label = "Simmons SS 0.52mm",
+		label = "Simmons SS 單絲魚線 0.52mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Simmons SS 0.52mm",
+		description = "線徑 0.52mm 的重型強化魚線。",
 		client = {
 			image = "simmons_mono_ss_2.png",
 		}
 	},
 	
 	["snake_power_line_clr_2"] = {
-		label = "Snake Power Line 0.65mm",
+		label = "Snake 強力透明魚絲 0.65mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "Snake Power Line 0.65mm",
+		description = "線徑 0.65mm 的超粗透明魚絲。",
 		client = {
 			image = "snake_power_line_clr_2.png",
 		}
 	},
 	
 	["solid_hipower_nylon"] = {
-		label = "HiPower Nylon 0.8mm",
+		label = "HiPower 尼龍魚絲 0.8mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "HiPower Nylon 0.8mm",
+		description = "線徑 0.8mm 的高拉力尼龍魚絲。",
 		client = {
 			image = "solid_hipower_nylon.png",
 		}
 	},
 	
 	["solid_hipower_nylon_lime"] = {
-		label = "HiPower Nylon L 0.85mm",
+		label = "HiPower 螢光綠尼龍魚絲 0.85mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "HiPower Nylon L 0.85mm",
+		description = "線徑 0.85mm 的螢光綠高拉力尼龍魚絲。",
 		client = {
 			image = "solid_hipower_nylon_lime.png",
 		}
 	},
 	
 	["solid_hipower_nylon_orange"] = {
-		label = "HiPower Nylon O 0.9mm",
+		label = "HiPower 橙色尼龍魚絲 0.9mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "HiPower Nylon O 0.9mm",
+		description = "線徑 0.9mm 的橙色高拉力尼龍魚絲。",
 		client = {
 			image = "solid_hipower_nylon_orange.png",
 		}
 	},
 	
 	["solid_hipower_nylon_2"] = {
-		label = "HiPower Nylon 1.05mm",
+		label = "HiPower 尼龍魚絲 1.05mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "HiPower Nylon 1.05mm",
+		description = "線徑 1.05mm 的特粗尼龍魚絲。",
 		client = {
 			image = "solid_hipower_nylon_2.png",
 		}
 	},
 	
 	["solid_hipower_nylon_lime_2"] = {
-		label = "HiPower Nylon L 1.15mm",
+		label = "HiPower 螢光綠尼龍魚絲 1.15mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "HiPower Nylon L 1.15mm",
+		description = "線徑 1.15mm 的特粗螢光綠尼龍魚絲。",
 		client = {
 			image = "solid_hipower_nylon_lime_2.png",
 		}
 	},
 	
 	["solid_hipower_nylon_orange_2"] = {
-		label = "HiPower Nylon O 1.25mm",
+		label = "HiPower 橙色尼龍魚絲 1.25mm",
 		weight = 70,
 		stack = true,
 		close = true,
-		description = "HiPower Nylon O 1.25mm",
+		description = "線徑 1.25mm 的巨物專用橙色尼龍魚絲。",
 		client = {
 			image = "solid_hipower_nylon_orange_2.png",
 		}
 	},
-	-- Rods
+	-- 釣魚竿（Rods）
 	["ufe_telerod_370"] = {
-		label = "UFE Telerod 370",
+		label = "UFE Telerod 370 伸縮竿",
 		weight = 150,
-		stack = false, -- assuming 'unique' is false means it should be stackable
+		stack = false,
 		close = true,
-		description = "UFE Telerod 370",
+		description = "UFE Telerod 370 輕便伸縮釣竿。",
 		client = {
 			image = "ufe_telerod_370.png",
 		}
 	},
 	
 	["carptack_feeder_master_250"] = {
-		label = "Carptack Feeder Master 250",
+		label = "Carptack Feeder Master 250 釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Carptack Feeder Master 250",
+		description = "Carptack Feeder Master 250 沉底投餌釣竿。",
 		client = {
 			image = "carptack_feeder_master_250.png",
 		}
 	},
 	
 	["sakura_tsubarea_tsa_552_xul"] = {
-		label = "Sakura Tsubarea TSA 552 XUL",
+		label = "Sakura Tsubarea TSA 552 XUL 路亞竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Tsubarea TSA 552 XUL",
+		description = "Sakura Tsubarea TSA 552 XUL 超輕量路亞釣竿。",
 		client = {
 			image = "sakura_tsubarea_tsa_552_xul.png",
 		}
 	},
 	
 	["carpex_hybid_carp_270"] = {
-		label = "Carpex Hybid Carp 270",
+		label = "Carpex Hybrid Carp 270 鯉魚竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Carpex Hybid Carp 270",
+		description = "Carpex Hybrid Carp 270 混合碳纖維鯉魚釣竿。",
 		client = {
 			image = "carpex_hybid_carp_270.png",
 		}
 	},
 	
 	["ufe_float_x5_300"] = {
-		label = "UFE Float X5 300",
+		label = "UFE Float X5 300 浮標竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "UFE Float X5 300",
+		description = "UFE Float X5 300 浮標釣竿。",
 		client = {
 			image = "ufe_float_x5_300.png",
 		}
 	},
 	
 	["predatek_fast_perch_210"] = {
-		label = "Predatek Fast Perch 210",
+		label = "Predatek Fast Perch 210 鱸魚竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Predatek Fast Perch 210",
+		description = "Predatek Fast Perch 210 敏銳型路亞釣竿。",
 		client = {
 			image = "predatek_fast_perch_210.png",
 		}
 	},
 	
 	["sakura_ionizer_bass_insb_701_ml"] = {
-		label = "Sakura Ionizer Bass INSB 701",
+		label = "Sakura Ionizer Bass INSB 701 鱸魚竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Ionizer Bass INSB 701",
+		description = "Sakura Ionizer Bass INSB 701 專業鱸魚釣竿。",
 		client = {
 			image = "sakura_ionizer_bass_insb_701_ml.png",
 		}
 	},
 	
 	["sakura_redbird_rds_602_l"] = {
-		label = "Sakura Redbird RDS 602 L",
+		label = "Sakura Redbird RDS 602 L 釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Redbird RDS 602 L",
+		description = "Sakura Redbird RDS 602 L 輕調性路亞竿。",
 		client = {
 			image = "sakura_redbird_rds_602_l.png",
 		}
 	},
 	
 	["carpex_cobalt_carp_360"] = {
-		label = "Carpex Cobalt Carp 360",
+		label = "Carpex Cobalt Carp 360 鯉魚竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Carpex Cobalt Carp 360",
+		description = "Carpex Cobalt Carp 360 遠投鯉魚釣竿。",
 		client = {
 			image = "carpex_cobalt_carp_360.png",
 		}
 	},
 	
 	["sakura_salt_sniper_salss_611_mj1"] = {
-		label = "Sakura Salt Sniper SALSS 611",
+		label = "Sakura Salt Sniper SALSS 611 海釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Salt Sniper SALSS 611",
+		description = "Sakura Salt Sniper SALSS 611 鐵板海釣竿。",
 		client = {
 			image = "sakura_salt_sniper_salss_611_mj1.png",
 		}
 	},
 	
 	["sakura_speciz_spes_light_602_zander"] = {
-		label = "Sakura Speciz Spes Light 602",
+		label = "Sakura Speciz Spes Light 602 釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Speciz Spes Light 602",
+		description = "Sakura Speciz Spes Light 602 梭鱸專用竿。",
 		client = {
 			image = "sakura_speciz_spes_light_602_zander.png",
 		}
 	},
 	
 	["sakura_redbird_rds_662"] = {
-		label = "Sakura Redbird RDS 662",
+		label = "Sakura Redbird RDS 662 釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Redbird RDS 662",
+		description = "Sakura Redbird RDS 662 通用路亞釣竿。",
 		client = {
 			image = "sakura_redbird_rds_662.png",
 		}
 	},
 	
 	["sakura_salt_sniper_salss_902_h"] = {
-		label = "Sakura Salt Sniper SALSS 902",
+		label = "Sakura Salt Sniper SALSS 902 重型海釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Salt Sniper SALSS 902",
+		description = "Sakura Salt Sniper SALSS 902 重型岸拋海釣竿。",
 		client = {
 			image = "sakura_salt_sniper_salss_902_h.png",
 		}
 	},
 	
 	["predatek_seahunter_230"] = {
-		label = "Predatek Seahunter 230",
+		label = "Predatek Seahunter 230 船釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Predatek Seahunter 230",
+		description = "Predatek Seahunter 230 深海船釣竿。",
 		client = {
 			image = "predatek_seahunter_230.png",
 		}
 	},
 	
 	["sakura_shukan_shuc_661_lj"] = {
-		label = "Sakura Shukan Shuc 661 LJ",
+		label = "Sakura Shukan Shuc 661 LJ 輕型鐵板竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Sakura Shukan Shuc 661 LJ",
+		description = "Sakura Shukan Shuc 661 LJ 輕型鐵板海釣竿。",
 		client = {
 			image = "sakura_shukan_shuc_661_lj.png",
 		}
 	},
 	
 	["ufe_powercatch_270"] = {
-		label = "UFE Powercatch 270",
+		label = "UFE Powercatch 270 強力釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "UFE Powercatch 270",
+		description = "UFE Powercatch 270 高負荷釣魚竿。",
 		client = {
 			image = "ufe_powercatch_270.png",
 		}
 	},
 	
 	["predatek_pilk_200"] = {
-		label = "Predatek Pilk 200",
+		label = "Predatek Pilk 200 船釣鐵板竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Predatek Pilk 200",
+		description = "Predatek Pilk 200 重型船釣竿。",
 		client = {
 			image = "predatek_pilk_200.png",
 		}
 	},
 	
 	["robinson_carbonic_nordic_pilk_300"] = {
-		label = "Robinson Carbonic Nordic Pilk",
+		label = "Robinson Carbonic Nordic Pilk 300 碳纖海釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Robinson Carbonic Nordic Pilk",
+		description = "Robinson Carbonic Nordic Pilk 300 北歐碳纖海釣竿。",
 		client = {
 			image = "robinson_carbonic_nordic_pilk_300.png",
 		}
 	},
 	
 	["carptack_bottom_cast_360"] = {
-		label = "Carptack Bottom Cast 360",
+		label = "Carptack Bottom Cast 360 沉底遠投竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Carptack Bottom Cast 360",
+		description = "Carptack Bottom Cast 360 重型沉底遠投竿。",
 		client = {
 			image = "carptack_bottom_cast_360.png",
 		}
 	},
 	
 	["seax_salfighter_170"] = {
-		label = "Seax Salfighter 170",
+		label = "Seax Salfighter 170 搏魚海釣竿",
 		weight = 150,
 		stack = false,
 		close = true,
-		description = "Seax Salfighter 170",
+		description = "Seax Salfighter 170 專攻大型海魚的強力釣竿。",
 		client = {
 			image = "seax_salfighter_170.png",
 		}
 	},
-	-- Reels
+	-- 魚絞（Reels）
 	["ufe_canta_1000"] = {
-		label = "UFE Canta 1000",
+		label = "UFE Canta 1000 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "UFE Canta 1000",
+		description = "UFE Canta 1000 輕量紡車魚絞。",
 		client = {
 			image = "ufe_canta_1000.png",
 		}
 	},
 	
 	["ufe_barracuda_2000bt"] = {
-		label = "UFE Barracuda 2000BT",
+		label = "UFE Barracuda 2000BT 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "UFE Barracuda 2000BT",
+		description = "UFE Barracuda 2000BT 紡車魚絞。",
 		client = {
 			image = "ufe_barracuda_2000bt.png",
 		}
 	},
 	
 	["sakura_alpax_4508"] = {
-		label = "Sakura Alpax 4508",
+		label = "Sakura Alpax 4508 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "Sakura Alpax 4508",
+		description = "Sakura Alpax 4508 中型海釣魚絞。",
 		client = {
 			image = "sakura_alpax_4508.png",
 		}
 	},
 	
 	["sakura_alpax_8508"] = {
-		label = "Sakura Alpax 8508",
+		label = "Sakura Alpax 8508 重型魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "Sakura Alpax 8508",
+		description = "Sakura Alpax 8508 大容量重型海釣魚絞。",
 		client = {
 			image = "sakura_alpax_8508.png",
 		}
 	},
 	
 	["ufe_belona_4000"] = {
-		label = "UFE Belona 4000",
+		label = "UFE Belona 4000 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "UFE Belona 4000",
+		description = "UFE Belona 4000 通用紡車魚絞。",
 		client = {
 			image = "ufe_belona_4000.png",
 		}
 	},
 	
 	["ufe_bigspin_8000b"] = {
-		label = "UFE Bigspin 8000B",
+		label = "UFE Bigspin 8000B 遠投魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "UFE Bigspin 8000B",
+		description = "UFE Bigspin 8000B 大型遠投魚絞。",
 		client = {
 			image = "ufe_bigspin_8000b.png",
 		}
 	},
 	
 	["ufe_batara_8000g"] = {
-		label = "UFE Batara 8000G",
+		label = "UFE Batara 8000G 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "UFE Batara 8000G",
+		description = "UFE Batara 8000G 高拉力魚絞。",
 		client = {
 			image = "ufe_batara_8000g.png",
 		}
 	},
 	
 	["ufe_batara_1000r"] = {
-		label = "UFE Batara 1000R",
+		label = "UFE Batara 1000R 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "UFE Batara 1000R",
+		description = "UFE Batara 1000R 精緻型魚絞。",
 		client = {
 			image = "ufe_batara_1000r.png",
 		}
 	},
 	
 	["robinson_big_runner_807qd"] = {
-		label = "Robinson Big Runner 807QD",
+		label = "Robinson Big Runner 807QD 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "Robinson Big Runner 807QD",
+		description = "Robinson Big Runner 807QD 雙卸力遠投魚絞。",
 		client = {
 			image = "robinson_big_runner_807qd.png",
 		}
 	},
 	
 	["spooler_catchpro_4000fd"] = {
-		label = "Spooler Catchpro 4000FD",
+		label = "Spooler Catchpro 4000FD 魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "Spooler Catchpro 4000FD",
+		description = "Spooler Catchpro 4000FD 前卸力紡車魚絞。",
 		client = {
 			image = "spooler_catchpro_4000fd.png",
 		}
 	},
 	
 	["ufe_opensea_8000_x"] = {
-		label = "UFE Opensea 8000-X",
+		label = "UFE Opensea 8000-X 深海魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "UFE Opensea 8000-X",
+		description = "UFE Opensea 8000-X 深海遠洋專用魚絞。",
 		client = {
 			image = "ufe_opensea_8000-x.png",
 		}
 	},
 	
 	["spooler_catchpro_8000fd"] = {
-		label = "Spooler Catchpro 8000FD",
+		label = "Spooler Catchpro 8000FD 重型魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "Spooler Catchpro 8000FD",
+		description = "Spooler Catchpro 8000FD 重型前卸力魚絞。",
 		client = {
 			image = "spooler_catchpro_8000fd.png",
 		}
 	},
 	
 	["spooler_catchpro_14000fd"] = {
-		label = "Spooler Catchpro 14000FD",
+		label = "Spooler Catchpro 14000FD 巨物魚絞",
 		weight = 100,
 		stack = false,
 		close = true,
-		description = "Spooler Catchpro 14000FD",
+		description = "Spooler Catchpro 14000FD 超大容量巨物魚絞。",
 		client = {
 			image = "spooler_catchpro_14000fd.png",
 		}
 	},
-	-- Hooks
+	-- 魚鉤（Hooks）
 	["ufa_bait_hook"] = {
-		label = "UFA Bait",
+		label = "UFA 活餌魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Bait",
+		description = "UFA 通用掛餌魚鉤。",
 		client = {
 			image = "ufa_bait_hook.png",
 		}
 	},
 	
 	["ufa_sproat_hook"] = {
-		label = "UFA Sproat",
+		label = "UFA Sproat 魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Sproat",
+		description = "UFA Sproat 經典弧形魚鉤。",
 		client = {
 			image = "ufa_sproat_hook.png",
 		}
 	},
 	
 	["captack_claw_xl_hook"] = {
-		label = "Captack Claw XL",
+		label = "Captack Claw XL 鷹爪大鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "Captack Claw XL",
+		description = "Captack Claw XL 特大號鷹爪魚鉤。",
 		client = {
 			image = "captack_claw_xl_hook.png",
 		}
 	},
 	
 	["ufa_sproat_g_hook"] = {
-		label = "UFA Sproat-G",
+		label = "UFA Sproat-G 魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Sproat-G",
+		description = "UFA Sproat-G 強化型魚鉤。",
 		client = {
 			image = "ufa_sproat_g_hook.png",
 		}
 	},
 	
 	["carptack_carp_ss_hook"] = {
-		label = "Carptack Carp S&S",
+		label = "Carptack Carp S&S 鯉魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "Carptack Carp S&S",
+		description = "Carptack Carp S&S 專用鯉魚鉤。",
 		client = {
 			image = "carptack_carp_ss_hook.png",
 		}
 	},
 	
 	["ufa_wide_gap_bl_hook"] = {
-		label = "UFA Wide Gap BL",
+		label = "UFA Wide Gap BL 寬腹無倒刺魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Wide Gap BL",
+		description = "UFA Wide Gap BL 寬門距無倒刺魚鉤。",
 		client = {
 			image = "ufa_wide_gap_bl_hook.png",
 		}
 	},
 	
 	["ufa_aberdeen_hook"] = {
-		label = "UFA Aberdeen",
+		label = "UFA Aberdeen 長柄魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Aberdeen",
+		description = "UFA Aberdeen 細長柄魚鉤。",
 		client = {
 			image = "ufa_aberdeen_hook.png",
 		}
 	},
 	
 	["ufa_octopus_bl_hook"] = {
-		label = "UFA Octopus BL",
+		label = "UFA Octopus BL 八爪無倒刺魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Octopus BL",
+		description = "UFA Octopus BL 無倒刺八爪魚鉤。",
 		client = {
 			image = "ufa_octopus_bl_hook.png",
 		}
 	},
 	
 	["ufa_livebait_hook"] = {
-		label = "UFA Livebait",
+		label = "UFA 活餌專用鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Livebait",
+		description = "UFA 專為掛載活餌設計的魚鉤。",
 		client = {
 			image = "ufa_livebait_hook.png",
 		}
 	},
 	
 	["carptack_micro_barb_hook"] = {
-		label = "Carptack Micro Barb",
+		label = "Carptack 微倒刺魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "Carptack Micro Barb",
+		description = "Carptack 微型倒刺精密魚鉤。",
 		client = {
 			image = "carptack_micro_barb_hook.png",
 		}
 	},
 	
 	["carptack_carp_hook"] = {
-		label = "Carptack Carp",
+		label = "Carptack 鯉魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "Carptack Carp",
+		description = "Carptack 標準鯉魚鉤。",
 		client = {
 			image = "carptack_carp_hook.png",
 		}
 	},
 	
 	["ufa_fusion_bl_hook"] = {
-		label = "UFA Fusion BL",
+		label = "UFA Fusion BL 複合無倒刺魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "UFA Fusion BL",
+		description = "UFA Fusion BL 高強度無倒刺魚鉤。",
 		client = {
 			image = "ufa_fusion_bl_hook.png",
 		}
 	},
 	
 	["predatek_octopus_hook"] = {
-		label = "Predatek Octopus",
+		label = "Predatek 八爪魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "Predatek Octopus",
+		description = "Predatek 掠食魚專用八爪魚鉤。",
 		client = {
 			image = "predatek_octopus_hook.png",
 		}
 	},
 	
 	["predatek_fusion_hook"] = {
-		label = "Predatek Fusion",
+		label = "Predatek Fusion 魚鉤",
 		weight = 40,
 		stack = true,
 		close = true,
-		description = "Predatek Fusion",
+		description = "Predatek Fusion 高穿透力魚鉤。",
 		client = {
 			image = "predatek_fusion_hook.png",
 		}
 	},
-	-- Scuba Shit
+	-- 潛水裝備
 	["scuba"] = {
-		label = "Scuba gear",
+		label = "水肺潛水裝備",
 		weight = 300,
 		stack = false,
 		close = true,
-		description = "Scuba gear",
+		description = "全套水肺潛水呼吸裝備。",
 		client = {
 			image = "scuba.png",
 		}
 	},
-	-- Fish
+	-- 漁獲魚類（Fish）
 	
 	["alligator_gar"] = {
-		label = "Alligator Gar",
-		weight = 550,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "An alligator gar fish.",
+		label = "鱷雀鱔",
+		weight = 550,
+		stack = true,
+		close = true,
+		description = "一條體型修長的鱷雀鱔。",
 		client = {
 			image = "alligator_gar.png",
 		}
 	},
 	
 	["amur_pike"] = {
-		label = "Amur Pike",
-		weight = 750,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "An Amur Pike fish.",
+		label = "黑龍江狗魚",
+		weight = 750,
+		stack = true,
+		close = true,
+		description = "一條兇猛的黑龍江狗魚。",
 		client = {
 			image = "amur_pike.png",
 		}
 	},
 	
 	["atlantic_cod"] = {
-		label = "Atlantic Cod",
-		weight = 300,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "An Atlantic Cod fish.",
+		label = "大西洋鱈魚",
+		weight = 300,
+		stack = true,
+		close = true,
+		description = "一條新鮮的大西洋鱈魚。",
 		client = {
 			image = "atlantic_cod.png",
 		}
 	},
 	
 	["fishing_gear"] = {
-		label = "Fishing Gear",
-		weight = 30,  -- Dropped a 0 from the weight
-		stack = false,  -- Made non-stackable (unique item)
-		close = true,  -- Equivalent to shouldClose
-		description = "Essential gear for fishing.",
+		label = "釣魚工具包",
+		weight = 30,
+		stack = false,
+		close = true,
+		description = "進行垂釣活動必備的工具套裝。",
 		client = {
 			image = "fishing_gear.png",
 		}
 	},
 	
 	["aquarium_pass"] = {
-		label = "Aquarium Pass",
-		weight = 30,  -- Dropped a 0 from the weight
-		stack = false,  -- Made non-stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "Pass for entry to the aquarium.",
+		label = "水族館通行證",
+		weight = 30,
+		stack = false,
+		close = true,
+		description = "進入水族館的專用通行證。",
 		client = {
 			image = "aquarium_pass.png",
 		}
 	},
 	
 	["research_kit"] = {
-		label = "Research Kit",
-		weight = 30,  -- Dropped a 0 from the weight
-		stack = false,  -- Made non-stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A kit useful for conducting field research.",
+		label = "野外研究工具箱",
+		weight = 30,
+		stack = false,
+		close = true,
+		description = "適合進行戶外生態及水域採樣研究的工具箱。",
 		client = {
 			image = "research_kit.png",
 		}
 	},
 	["special_boots"] = {
-		label = "Special Boots",
-		weight = 30,  -- Dropped a 0 from the weight
-		stack = false,  -- Made non-stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "Specially designed boots for rugged terrain.",
+		label = "防滑涉水靴",
+		weight = 30,
+		stack = false,
+		close = true,
+		description = "專為崎嶇濕滑地形設計的防水防滑靴。",
 		client = {
 			image = "special_boots.png",
 		}
 	},
 	
 	["museum_ticket"] = {
-		label = "Museum Ticket",
-		weight = 30,  -- Dropped a 0 from the weight
-		stack = false,  -- Made non-stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "Ticket for entry to the museum.",
+		label = "博物館入場券",
+		weight = 30,
+		stack = false,
+		close = true,
+		description = "進入海洋歷史博物館的入場券。",
 		client = {
 			image = "museum_ticket.png",
 		}
 	},
 	
 	["atlantic_salmon"] = {
-		label = "Atlantic Salmon",
-		weight = 500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "An Atlantic Salmon fish.",
+		label = "大西洋三文魚",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "一條肥美的大西洋三文魚。",
 		client = {
 			image = "atlantic_salmon.png",
 		}
 	},
 	
 	["barbel"] = {
-		label = "Barbel",
-		weight = 600,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Barbel fish.",
+		label = "魮魚",
+		weight = 600,
+		stack = true,
+		close = true,
+		description = "一條河床常見的魮魚。",
 		client = {
 			image = "barbel.png",
 		}
 	},
 	
 	["beluga_sturgeon"] = {
-		label = "Beluga Sturgeon",
-		weight = 264,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Beluga Sturgeon fish.",
+		label = "歐洲鰉（白鱘）",
+		weight = 264,
+		stack = true,
+		close = true,
+		description = "一條珍貴的歐洲鰉。",
 		client = {
 			image = "beluga_sturgeon.png",
 		}
 	},
 	
 	["black_grayling"] = {
-		label = "Black Grayling",
-		weight = 120,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Black Grayling fish.",
+		label = "黑茴魚",
+		weight = 120,
+		stack = true,
+		close = true,
+		description = "一條棲息於清澈溪流的黑茴魚。",
 		client = {
 			image = "black_grayling.png",
 		}
 	},
 	
 	["blacktip_reef_shark"] = {
-		label = "Blacktip Reef Shark",
-		weight = 1500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Blacktip Reef Shark.",
+		label = "黑鰭礁鯊",
+		weight = 1500,
+		stack = true,
+		close = true,
+		description = "一條在珊瑚礁海域出沒的黑鰭礁鯊。",
 		client = {
 			image = "blacktip_reef_shark.png",
 		}
 	},
 	
 	["blue_marlin"] = {
-		label = "Blue Marlin",
-		weight = 200,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Blue Marlin fish.",
+		label = "藍槍魚（馬林魚）",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "一條速度極快的藍槍魚。",
 		client = {
 			image = "blue_marlin.png",
 		}
 	},
 	
 	["bluefin_tuna"] = {
-		label = "Bluefin Tuna",
-		weight = 270,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Bluefin Tuna fish.",
+		label = "藍鰭吞拿魚",
+		weight = 270,
+		stack = true,
+		close = true,
+		description = "一條價值不菲的藍鰭吞拿魚。",
 		client = {
 			image = "bluefin_tuna.png",
 		}
 	},
 	
 	["bluegill"] = {
-		label = "Bluegill",
-		weight = 120,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Bluegill fish.",
+		label = "藍鰓太陽魚",
+		weight = 120,
+		stack = true,
+		close = true,
+		description = "一條色彩斑斕的藍鰓太陽魚。",
 		client = {
 			image = "bluegill.png",
 		}
 	},
 	
 	["brook_trout"] = {
-		label = "Brook Trout",
-		weight = 700,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Brook Trout fish.",
+		label = "美洲紅點鮭",
+		weight = 700,
+		stack = true,
+		close = true,
+		description = "一條溪流中的美洲紅點鮭。",
 		client = {
 			image = "brook_trout.png",
 		}
 	},
 	
 	["brown_trout"] = {
-		label = "Brown Trout",
-		weight = 230,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Brown Trout fish.",
+		label = "褐鱒",
+		weight = 230,
+		stack = true,
+		close = true,
+		description = "一條野生的褐鱒。",
 		client = {
 			image = "brown_trout.png",
 		}
 	},
 	
 	["bull_trout"] = {
-		label = "Bull Trout",
-		weight = 200,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Bull Trout fish.",
+		label = "公牛紅點鮭",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "一條強壯的公牛紅點鮭。",
 		client = {
 			image = "bull_trout.png",
 		}
 	},
 	
 	["chub"] = {
-		label = "Chub",
-		weight = 150,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Chub fish.",
+		label = "歐洲鰱魚",
+		weight = 150,
+		stack = true,
+		close = true,
+		description = "一條淡水歐洲鰱魚。",
 		client = {
 			image = "chub.png",
 		}
 	},
 	
 	["chum_salmon"] = {
-		label = "Chum Salmon",
-		weight = 600,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Chum Salmon fish.",
+		label = "大馬哈魚（狗鮭）",
+		weight = 600,
+		stack = true,
+		close = true,
+		description = "一條洄游的大馬哈魚。",
 		client = {
 			image = "chum_salmon.png",
 		}
 	},
 	
 	["coho_salmon"] = {
-		label = "Coho Salmon",
-		weight = 500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Coho Salmon fish.",
+		label = "銀三文魚",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "一條銀白色的銀三文魚。",
 		client = {
 			image = "coho_salmon.png",
 		}
 	},
 	
 	["common_bleak"] = {
-		label = "Common Bleak",
-		weight = 10,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Common Bleak fish.",
+		label = "歐鰷魚",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "一條體型小巧的歐鰷魚。",
 		client = {
 			image = "common_bleak.png",
 		}
 	},
 	
 	["common_bream"] = {
-		label = "Common Bream",
-		weight = 400,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Common Bream fish.",
+		label = "歐鯿魚",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "一條身形扁平的歐鯿魚。",
 		client = {
 			image = "common_bream.png",
 		}
 	},
 	
 	["common_carp"] = {
-		label = "Common Carp",
-		weight = 700,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Common Carp fish.",
+		label = "鯉魚",
+		weight = 700,
+		stack = true,
+		close = true,
+		description = "一條常見的野生鯉魚。",
 		client = {
 			image = "common_carp.png",
 		}
 	},
 	["crucian_carp"] = {
-		label = "Crucian Carp",
-		weight = 140,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Crucian Carp fish.",
+		label = "鯽魚",
+		weight = 140,
+		stack = true,
+		close = true,
+		description = "一條鮮活的鯽魚。",
 		client = {
 			image = "crucian_carp.png",
 		}
 	},
 	
 	["european_bass"] = {
-		label = "European Bass",
-		weight = 250,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A European Bass fish.",
+		label = "歐洲海鱸",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "一條肉質鮮美的歐洲海鱸。",
 		client = {
 			image = "european_bass.png",
 		}
 	},
 	
 	["european_eel"] = {
-		label = "European Eel",
-		weight = 300,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A European Eel fish.",
+		label = "歐洲鰻鱺",
+		weight = 300,
+		stack = true,
+		close = true,
+		description = "一條滑溜的歐洲鰻鱺。",
 		client = {
 			image = "european_eel.png",
 		}
 	},
 	
 	["european_flounder"] = {
-		label = "European Flounder",
-		weight = 170,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A European Flounder fish.",
+		label = "歐洲比目魚",
+		weight = 170,
+		stack = true,
+		close = true,
+		description = "一條扁平的歐洲比目魚。",
 		client = {
 			image = "european_flounder.png",
 		}
 	},
 	
 	["european_perch"] = {
-		label = "European Perch",
-		weight = 500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A European Perch fish.",
+		label = "歐洲河鱸",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "一條帶有條紋的歐洲河鱸。",
 		client = {
 			image = "european_perch.png",
 		}
 	},
 	
 	["european_sea_sturgeon"] = {
-		label = "European Sea Sturgeon",
-		weight = 2000,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A European Sea Sturgeon.",
+		label = "歐洲海鱘",
+		weight = 2000,
+		stack = true,
+		close = true,
+		description = "一條體型龐大的歐洲海鱘。",
 		client = {
 			image = "european_sea_sturgeon.png",
 		}
 	},
 	
 	["electric_eel"] = {
-		label = "Electric Eel",
-		weight = 1500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "An Electric Eel.",
+		label = "電鰻",
+		weight = 1500,
+		stack = true,
+		close = true,
+		description = "一條會釋放高壓電流的電鰻。",
 		client = {
 			image = "electric_eel.png",
 		}
 	},
 	
 	["garfish"] = {
-		label = "Garfish",
-		weight = 50,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Garfish.",
+		label = "鶴鱵（針魚）",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "一條長嘴細身的鶴鱵。",
 		client = {
 			image = "garfish.png",
 		}
 	},
 	
 	["giant_freshwater_stingray"] = {
-		label = "Giant Freshwater Stingray",
-		weight = 350,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Giant Freshwater Stingray.",
+		label = "巨型淡水魔鬼魚",
+		weight = 350,
+		stack = true,
+		close = true,
+		description = "一條罕見的巨型淡水魔鬼魚。",
 		client = {
 			image = "giant_freshwater_stingray.png",
 		}
 	},
 	
 	["giant_grouper"] = {
-		label = "Giant Grouper",
-		weight = 260,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Giant Grouper fish.",
+		label = "龍躉（巨型石斑）",
+		weight = 260,
+		stack = true,
+		close = true,
+		description = "一條體型碩大的龍躉。",
 		client = {
 			image = "giant_grouper.png",
 		}
 	},
 	
 	["giant_squid"] = {
-		label = "Giant Squid",
-		weight = 2000,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Giant Squid.",
+		label = "大王烏賊（巨型魷魚）",
+		weight = 2000,
+		stack = true,
+		close = true,
+		description = "一隻來自深海的巨型大王烏賊。",
 		client = {
 			image = "giant_squid.png",
 		}
 	},
 	
 	["giant_trevally"] = {
-		label = "Giant Trevally",
-		weight = 200,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Giant Trevally fish.",
+		label = "浪人鰺（牛港鰺）",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "一條拉力極強的浪人鰺。",
 		client = {
 			image = "giant_trevally.png",
 		}
 	},
 	
 	["golden_trout"] = {
-		label = "Golden Trout",
-		weight = 40,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Golden Trout fish.",
+		label = "金鱒",
+		weight = 40,
+		stack = true,
+		close = true,
+		description = "一條閃耀金黃色澤的金鱒。",
 		client = {
 			image = "golden_trout.png",
 		}
 	},
 	
 	["grass_carp"] = {
-		label = "Grass Carp",
-		weight = 120,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Grass Carp fish.",
+		label = "鯇魚（草魚）",
+		weight = 120,
+		stack = true,
+		close = true,
+		description = "一條常見的淡水鯇魚。",
 		client = {
 			image = "grass_carp.png",
 		}
 	},
 	
 	["grass_pickerel"] = {
-		label = "Grass Pickerel",
-		weight = 90,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Grass Pickerel fish.",
+		label = "草狗魚",
+		weight = 90,
+		stack = true,
+		close = true,
+		description = "一條小型掠食性草狗魚。",
 		client = {
 			image = "grass_pickerel.png",
 		}
 	},
 	
 	["grayling"] = {
-		label = "Grayling",
-		weight = 80,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Grayling fish.",
+		label = "茴魚",
+		weight = 80,
+		stack = true,
+		close = true,
+		description = "一條背鰭寬大的茴魚。",
 		client = {
 			image = "grayling.png",
 		}
 	},
 	
 	["great_barracuda"] = {
-		label = "Great Barracuda",
-		weight = 900,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Great Barracuda fish.",
+		label = "大梭魚（海狼）",
+		weight = 900,
+		stack = true,
+		close = true,
+		description = "一條牙齒鋒利的大梭魚。",
 		client = {
 			image = "great_barracuda.png",
 		}
 	},
 	
 	["grey_snapper"] = {
-		label = "Grey Snapper",
-		weight = 400,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Grey Snapper fish.",
+		label = "灰笛鯛",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "一條常見的灰笛鯛。",
 		client = {
 			image = "grey_snapper.png",
 		}
 	},
 	
 	["huchen"] = {
-		label = "Huchen",
-		weight = 1500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Huchen fish.",
+		label = "哲羅鮭",
+		weight = 1500,
+		stack = true,
+		close = true,
+		description = "一條大型淡水猛魚哲羅鮭。",
 		client = {
 			image = "huchen.png",
 		}
 	},
 	
 	["ide"] = {
-		label = "Ide",
-		weight = 100,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "An Ide fish.",
+		label = "圓腹雅羅魚",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "一條淡水圓腹雅羅魚。",
 		client = {
 			image = "ide.png",
 		}
 	},
 	
 	["indian_threadfish"] = {
-		label = "Indian Threadfish",
-		weight = 250,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "An Indian Threadfish.",
+		label = "印度絲鰺",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "一條背鰭拖著長絲的印度絲鰺。",
 		client = {
 			image = "indian_threadfish.png",
 		}
 	},
 	
 	["lake_sturgeon"] = {
-		label = "Lake Sturgeon",
-		weight = 1600,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Lake Sturgeon fish.",
+		label = "湖鱘",
+		weight = 1600,
+		stack = true,
+		close = true,
+		description = "一條古老的淡水湖鱘。",
 		client = {
 			image = "lake_sturgeon.png",
 		}
 	},
 	
 	["largemouth_bass"] = {
-		label = "Largemouth Bass",
-		weight = 100,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Largemouth Bass fish.",
+		label = "大口黑鱸",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "一條路亞釣手最愛的大口黑鱸。",
 		client = {
 			image = "largemouth_bass.png",
 		}
 	},
 	
 	["mahi_mahi"] = {
-		label = "Mahi-Mahi",
-		weight = 1000,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Mahi-Mahi fish.",
+		label = "鬼頭刀（鯕鰍）",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "一條色彩艷麗的遠洋鬼頭刀。",
 		client = {
 			image = "mahi_mahi.png",
 		}
 	},
 	
 	["malabar_grouper"] = {
-		label = "Malabar Grouper",
-		weight = 1500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Malabar Grouper fish.",
+		label = "瑪拉巴石斑魚",
+		weight = 1500,
+		stack = true,
+		close = true,
+		description = "一條大型瑪拉巴石斑魚。",
 		client = {
 			image = "malabar_grouper.png",
 		}
 	},
 	
 	["mirror_carp"] = {
-		label = "Mirror Carp",
-		weight = 700,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Mirror Carp fish.",
+		label = "鏡鯉",
+		weight = 700,
+		stack = true,
+		close = true,
+		description = "一條魚鱗大而稀疏的鏡鯉。",
 		client = {
 			image = "mirror_carp.png",
 		}
 	},
 	
 	["northern_pike"] = {
-		label = "Northern Pike",
-		weight = 500,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Northern Pike fish.",
+		label = "白斑狗魚",
+		weight = 500,
+		stack = true,
+		close = true,
+		description = "一條伏擊型淡水掠食者白斑狗魚。",
 		client = {
 			image = "northern_pike.png",
 		}
 	},
 	
 	["pink_river_dolphin"] = {
-		label = "Pink River Dolphin",
-		weight = 1550,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Pink River Dolphin.",
+		label = "亞馬遜粉紅河豚",
+		weight = 1550,
+		stack = true,
+		close = true,
+		description = "一條罕見的粉紅色淡水豚。",
 		client = {
 			image = "pink_river_dolphin.png",
 		}
 	},
 	
 	["pink_salmon"] = {
-		label = "Pink Salmon",
-		weight = 200,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Pink Salmon fish.",
+		label = "粉紅三文魚",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "一條野生的粉紅三文魚。",
 		client = {
 			image = "pink_salmon.png",
 		}
 	},
 	
 	["prussian_carp"] = {
-		label = "Prussian Carp",
-		weight = 90,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Prussian Carp fish.",
+		label = "銀鯽",
+		weight = 90,
+		stack = true,
+		close = true,
+		description = "一條銀白色的淡水銀鯽。",
 		client = {
 			image = "prussian_carp.png",
 		}
 	},
 	
 	["pufferfish"] = {
-		label = "Pufferfish",
-		weight = 150,  -- Dropped a 0 from the weight
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Pufferfish.",
+		label = "雞泡魚（河豚）",
+		weight = 150,
+		stack = true,
+		close = true,
+		description = "一條受驚時會鼓起身體的雞泡魚。",
 		client = {
 			image = "pufferfish.png",
 		}
 	},
 	
 	["pumpkinseed"] = {
-		label = "Pumpkinseed",
-		weight = 40,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Pumpkinseed fish.",
+		label = "瓜子太陽魚",
+		weight = 40,
+		stack = true,
+		close = true,
+		description = "一條花紋精緻的瓜子太陽魚。",
 		client = {
 			image = "pumpkinseed.png",
 		}
 	},
 	
 	["rainbow_trout"] = {
-		label = "Rainbow Trout",
-		weight = 100,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Rainbow Trout fish.",
+		label = "虹鱒",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "一條體側帶有粉紅彩虹紋的虹鱒。",
 		client = {
 			image = "rainbow_trout.png",
 		}
 	},
 	
 	["red_lionfish"] = {
-		label = "Red Lionfish",
-		weight = 100,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Red Lionfish.",
+		label = "紅獅子魚",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "一條背鰭帶毒且外型華麗的紅獅子魚。",
 		client = {
 			image = "red_lionfish.png",
 		}
 	},
 	
 	["redeye_piranha"] = {
-		label = "Redeye Piranha",
-		weight = 120,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Redeye Piranha.",
+		label = "紅眼食人魚",
+		weight = 120,
+		stack = true,
+		close = true,
+		description = "一條牙齒極其鋒利的紅眼食人魚。",
 		client = {
 			image = "redeye_piranha.png",
 		}
 	},
 	
 	["redfin_pickerel"] = {
-		label = "Redfin Pickerel",
-		weight = 40,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Redfin Pickerel fish.",
+		label = "紅鰭狗魚",
+		weight = 40,
+		stack = true,
+		close = true,
+		description = "一條魚鰭呈紅橙色的紅鰭狗魚。",
 		client = {
 			image = "redfin_pickerel.png",
 		}
 	},
 	
 	["roach"] = {
-		label = "Roach",
-		weight = 50,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Roach fish.",
+		label = "擬鯉",
+		weight = 50,
+		stack = true,
+		close = true,
+		description = "一條常見的淡水擬鯉。",
 		client = {
 			image = "roach.png",
 		}
 	},
 	
 	["sea_trout"] = {
-		label = "Sea Trout",
-		weight = 200,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Sea Trout fish.",
+		label = "海鱒",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "一條在河口與大海間洄游的海鱒。",
 		client = {
 			image = "sea_trout.png",
 		}
 	},
 	
 	["silver_carp"] = {
-		label = "Silver Carp",
-		weight = 1000,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Silver Carp fish.",
+		label = "鰱魚（白鰱）",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "一條體型較大的淡水鰱魚。",
 		client = {
 			image = "silver_carp.png",
 		}
 	},
 	
 	["skeleton"] = {
-		label = "Skeleton",
-		weight = 10,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Skeleton.",
+		label = "魚骨骸骨",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "一副從水底釣上來的神秘魚骨。",
 		client = {
 			image = "skeleton.png",
 		}
 	},
 	
 	["smallmouth_bass"] = {
-		label = "Smallmouth Bass",
-		weight = 150,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Smallmouth Bass fish.",
+		label = "小口黑鱸",
+		weight = 150,
+		stack = true,
+		close = true,
+		description = "一條爆發力十足的小口黑鱸。",
 		client = {
 			image = "smallmouth_bass.png",
 		}
 	},
 	
 	["sockeye_salmon"] = {
-		label = "Sockeye Salmon",
-		weight = 300,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Sockeye Salmon fish.",
+		label = "紅三文魚",
+		weight = 300,
+		stack = true,
+		close = true,
+		description = "一條肉色鮮紅的紅三文魚。",
 		client = {
 			image = "sockeye_salmon.png",
 		}
 	},
 	
 	["south_sea_pearl_oyster"] = {
-		label = "South Sea Pearl Oyster",
-		weight = 10,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A South Sea Pearl Oyster.",
+		label = "南海珍珠蠔",
+		weight = 10,
+		stack = true,
+		close = true,
+		description = "一隻可能孕育著珍貴珍珠的南海珍珠蠔。",
 		client = {
 			image = "south_sea_pearl_oyster.png",
 		}
 	},
 	
 	["tench"] = {
-		label = "Tench",
-		weight = 250,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Tench fish.",
+		label = "丁鱥",
+		weight = 250,
+		stack = true,
+		close = true,
+		description = "一條體色墨綠的淡水丁鱥。",
 		client = {
 			image = "tench.png",
 		}
 	},
 	
 	["tiger_shark"] = {
-		label = "Tiger Shark",
-		weight = 5500,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Tiger Shark.",
+		label = "虎鯊",
+		weight = 5500,
+		stack = true,
+		close = true,
+		description = "一條體型巨大的深海虎鯊。",
 		client = {
 			image = "tiger_shark.png",
 		}
 	},
 	
 	["wels_catfish"] = {
-		label = "Wels Catfish",
-		weight = 400,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Wels Catfish fish.",
+		label = "歐洲巨鯰",
+		weight = 400,
+		stack = true,
+		close = true,
+		description = "一條體型龐大的淡水歐洲巨鯰。",
 		client = {
 			image = "wels_catfish.png",
 		}
 	},
 	
 	["white_sturgeon"] = {
-		label = "White Sturgeon",
-		weight = 800,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A White Sturgeon fish.",
+		label = "白鱘",
+		weight = 800,
+		stack = true,
+		close = true,
+		description = "一條大型白鱘。",
 		client = {
 			image = "white_sturgeon.png",
 		}
 	},
 	
 	["yellow_perch"] = {
-		label = "Yellow Perch",
-		weight = 40,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Yellow Perch fish.",
+		label = "黃鱸",
+		weight = 40,
+		stack = true,
+		close = true,
+		description = "一條金黃色的淡水黃鱸。",
 		client = {
 			image = "yellow_perch.png",
 		}
 	},
 	
 	["yellowfin_tuna"] = {
-		label = "Yellowfin Tuna",
-		weight = 900,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Yellowfin Tuna fish.",
+		label = "黃鰭吞拿魚",
+		weight = 900,
+		stack = true,
+		close = true,
+		description = "一條新鮮捕獲的黃鰭吞拿魚。",
 		client = {
 			image = "yellowfin_tuna.png",
 		}
 	},
 	
 	["yellowtail_barracuda"] = {
-		label = "Yellowtail Barracuda",
-		weight = 110,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Yellowtail Barracuda.",
+		label = "黃尾梭魚",
+		weight = 110,
+		stack = true,
+		close = true,
+		description = "一條尾鰭泛黃的黃尾梭魚。",
 		client = {
 			image = "yellowtail_barracuda.png",
 		}
 	},
 	
 	["zander"] = {
-		label = "Zander",
-		weight = 200,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A Zander fish.",
+		label = "梭鱸",
+		weight = 200,
+		stack = true,
+		close = true,
+		description = "一條眼神銳利的淡水梭鱸。",
 		client = {
 			image = "zander.png",
 		}
 	},
 	
 	["paddlefish"] = {
-		label = "Paddle Fish",
-		weight = 1000,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A rare and illegal Paddle Fish.",
+		label = "匙吻鱘",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "一條稀有且受法例保護的受管制匙吻鱘。",
 		client = {
 			image = "paddlefish.png",
 		}
 	},
 	
 	["sawfish"] = {
-		label = "Saw Fish",
-		weight = 1000,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A rare and illegal Saw Fish.",
+		label = "鋸鰩",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "一條稀有且受法例保護的受管制鋸鰩。",
 		client = {
 			image = "sawfish.png",
 		}
 	},
 	
 	["eel"] = {
-		label = "Eel",
-		weight = 1000,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A rare and illegal Eel.",
+		label = "海鰻",
+		weight = 1000,
+		stack = true,
+		close = true,
+		description = "一條稀有且受法例保護的受管制海鰻。",
 		client = {
 			image = "eel.png",
 		}
 	},
 	
 	["hammerheadshark"] = {
-		label = "Hammer Head Shark",
-		weight = 2500,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A rare and illegal Hammer Head Shark.",
+		label = "錘頭鯊（雙髻鯊）",
+		weight = 2500,
+		stack = true,
+		close = true,
+		description = "一條稀有且受法例保護的受管制錘頭鯊。",
 		client = {
 			image = "hammerheadshark.png",
 		}
 	},
 	
 	["seaturtle"] = {
-		label = "Sea Turtle",
-		weight = 2500,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A rare and illegal Sea Turtle.",
+		label = "海龜",
+		weight = 2500,
+		stack = true,
+		close = true,
+		description = "一隻稀有且受法例保護的受管制海龜。",
 		client = {
 			image = "seaturtle.png",
 		}
 	},
 	
 	["leopardshark"] = {
-		label = "Leopard Shark",
-		weight = 2500,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A rare and illegal Leopard Shark.",
+		label = "豹紋鯊",
+		weight = 2500,
+		stack = true,
+		close = true,
+		description = "一條稀有且受法例保護的受管制豹紋鯊。",
 		client = {
 			image = "leopardshark.png",
 		}
 	},
 	
 	["blueshark"] = {
-		label = "Blue Shark",
-		weight = 4000,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A legendary and illegal Blue Shark.",
+		label = "大青鯊（藍鯊）",
+		weight = 4000,
+		stack = true,
+		close = true,
+		description = "一條傳說級且受法例保護的受管制大青鯊。",
 		client = {
 			image = "blueshark.png",
 		}
 	},
 	
 	["greatwhiteshark"] = {
-		label = "Great White Shark",
-		weight = 10000,  -- Converted weight to OxInventory format
-		stack = true,  -- Made stackable
-		close = true,  -- Equivalent to shouldClose
-		description = "A mythic and illegal Great White Shark.",
+		label = "大白鯊",
+		weight = 10000,
+		stack = true,
+		close = true,
+		description = "一條神話級且受法例保護的受管制大白鯊。",
 		client = {
 			image = "greatwhiteshark.png",
 		}
 	},
 	
-	-- Diving Items
+	-- 潛水打撈物品（Diving Items）
 	["ancient_artifact"] = {
-		label = "Ancient Artifact",
+		label = "古代文物",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "An Ancient Artifact!",
+		description = "一件從海底發掘出的古老文物！",
 		client = {
 			image = "ancient_artifact.png",
 		}
 	},
 	["antique_compass"] = {
-		label = "Antique Compass",
+		label = "古董羅盤",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "An Antique Compass.",
+		description = "一個年代久遠的黃銅古董羅盤。",
 		client = {
 			image = "antique_compass.png",
 		}
 	},
 	["enchanted_jewel"] = {
-		label = "Enchanted Jewel",
+		label = "奇幻寶石",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "An Enchanted Jewel.",
+		description = "一顆散發神秘光芒的珍貴寶石。",
 		client = {
 			image = "enchanted_jewel.png",
 		}
 	},
 	["luxury_watch"] = {
-		label = "Luxury Watch",
+		label = "名貴腕錶",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "An Expensive Watch.",
+		description = "一隻價值連城的豪華名錶。",
 		client = {
 			image = "luxury_watch.png",
 		}
 	},
 	["meteorite_ore"] = {
-		label = "Meteorite Ore",
+		label = "隕石礦石",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "Meteorite Ore.",
+		description = "蘊含稀有金屬的太空隕石礦塊。",
 		client = {
 			image = "meteorite_ore.png",
 		}
 	},
 	["mystic_crystal"] = {
-		label = "Mystic Crystal",
+		label = "神秘水晶",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "A Mystic Crystal.",
+		description = "一塊晶瑩剔透的神秘水晶。",
 		client = {
 			image = "mystic_crystal.png",
 		}
 	},
 	["phantom_amulet"] = {
-		label = "Phantom Amulet",
+		label = "幽靈護身符",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "A Phantom Amulet.",
+		description = "一枚刻有古老符文的幽靈護身符。",
 		client = {
 			image = "phantom_amulet.png",
 		}
 	},
 	["precious_pearls"] = {
-		label = "Precious Pearls",
+		label = "珍貴天然珍珠",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "Handfull of Precious Pearls.",
+		description = "一把圓潤光澤的天然深海珍珠。",
 		client = {
 			image = "precious_pearls.png",
 		}
 	},
 	["rare_spices"] = {
-		label = "Rare Spices",
+		label = "珍稀香料",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "Collection of Rare Spices.",
+		description = "一批保存完好的珍稀異國香料。",
 		client = {
 			image = "rare_spices.png",
 		}
 	},
 	["spy_gadget"] = {
-		label = "Spy Gadget",
+		label = "特工秘密裝置",
 		weight = 1000,  
 		stack = true,  
 		close = true,  
-		description = "A Spy Gadget.",
+		description = "一個精密的間諜特工電子裝置。",
 		client = {
 			image = "spy_gadget.png",
 		}
 	},
 })
 
-insert({	-- FiveCode Tequila Job
-	-- Other
+insert({	-- FiveCode Tequila 酒吧工作
+	-- 其他材料與用品
 	['tk_ticket'] = {
-		label = 'Ticket - Tequi-la-la',
+		label = 'Tequi-la-la 入場券',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Tequi-la-la ticket.'
+		description = 'Tequi-la-la 酒吧入場券。'
 	},
 
 	['tk_cleansponge'] = {
-		label = 'Clean Sponge',
+		label = '乾淨海綿',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean sponge which is ready for some cleaning!'
+		description = '乾淨的清潔海綿，隨時可用來擦拭桌面！'
 	},
 
 	['tk_dirtysponge'] = {
-		label = 'Dirty Sponge',
+		label = '髒海綿',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty sponge which needs to be cleaned!'
+		description = '弄髒了的海綿，需要拿去清洗！'
 	},
 
 	['tk_nuts'] = {
-		label = 'Nuts',
+		label = '果仁',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Nuts to put into a clean bowl.'
+		description = '可盛入乾淨碗中的佐酒果仁。'
 	},
 
 	['tk_beans'] = {
-		label = 'Beans',
+		label = '佐酒豆子',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Beans to put into a clean bowl.'
+		description = '可盛入乾淨碗中的香脆豆子。'
 	},
 
 	['tk_juice'] = {
-		label = 'Juice',
+		label = '果汁',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Carton of fresh juice. Probably not from local fruit.'
+		description = '一盒新鮮果汁，大概不是本地水果榨的。'
 	},
 
 	['tk_grenadine'] = {
-		label = 'Grenadine Syrup',
+		label = '紅石榴糖漿',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Sweet and vibrant red syrup made from pomegranates.'
+		description = '由石榴製成的香甜鮮紅調酒糖漿。'
 	},
 
 	['tk_grapefruitsoda'] = {
-		label = 'Grapefruit Soda',
+		label = '西柚梳打水',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A bottle of sparkling, bitter-sweet grapefruit soda.'
+		description = '一瓶甘甜微苦的有氣西柚梳打水。'
 	},
 
 	['tk_salt'] = {
-		label = 'Salt',
+		label = '粗鹽',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A tablespoon of coarse salt for rimming glasses.'
+		description = '用於製作雞尾酒杯口鹽邊的粗鹽。'
 	},
 
 	['tk_gingerbeer'] = {
-		label = 'Ginger Beer',
+		label = '薑汁啤酒',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Spicy, non-alcoholic ginger beer. Packs a real punch.'
+		description = '辛辣無酒精薑汁汽水，口感十足。'
 	},
 
 	['tk_soda'] = {
-		label = 'Soda',
+		label = '梳打水',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A bottle of sparkling soda water.'
+		description = '一瓶氣泡十足的純梳打水。'
 	},
 
 	['tk_bananaliqueur'] = {
-		label = 'Banana Liqueur',
+		label = '香蕉力嬌酒',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Sweet and flavorful banana liqueur.'
+		description = '香甜濃郁的香蕉風味利口酒。'
 	},
 
 	['tk_cleantallglass'] = {
-		label = 'Clean Tall Glass',
+		label = '乾淨高身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean tall glass for serving drinks.'
+		description = '用於盛載飲品的乾淨高身玻璃杯。'
 	},
 
 	['tk_dirtytallglass'] = {
-		label = 'Dirty Tall Glass',
+		label = '髒高身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty tall glass ready to be cleaned.'
+		description = '用過的高身玻璃杯，需要清洗。'
 	},
 
 	['tk_cleanshortglass'] = {
-		label = 'Clean Short Glass',
+		label = '乾淨矮身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean short glass for serving spirits.'
+		description = '用於盛載烈酒的乾淨矮身杯。'
 	},
 
 	['tk_dirtyshortglass'] = {
-		label = 'Dirty Short Glass',
+		label = '髒矮身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty short glass ready to be cleaned.'
+		description = '用過的矮身杯，需要清洗。'
 	},
 
 	['tk_cleancocktailglass'] = {
-		label = 'Clean Cocktail Glass',
+		label = '乾淨雞尾酒杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean glass for serving cocktails.'
+		description = '用於盛載雞尾酒的乾淨高腳杯。'
 	},
 
 	['tk_dirtycocktailglass'] = {
-		label = 'Dirty Cocktail Glass',
+		label = '髒雞尾酒杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty cocktail glass ready to be cleaned.'
+		description = '用過的雞尾酒杯，需要清洗。'
 	},
 
 	['tk_ice'] = {
-		label = 'Ice',
+		label = '冰塊',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A single ice cube for drinks.'
+		description = '用於冰鎮飲品的冰塊。'
 	},
 
-	-- Snacks
+	-- 小食（Snacks）
 	['tk_cleanbowl'] = {
-		label = 'Clean Bowl',
+		label = '乾淨小食碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean bowl to put food into.'
+		description = '用於盛載小食的乾淨碗。'
 	},
 
 	['tk_dirtybowl'] = {
-		label = 'Dirty Bowl',
+		label = '髒小食碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty bowl ready to be cleaned.'
+		description = '用過的小食碗，需要清洗。'
 	},
 
 	['tk_beanbowl'] = {
-		label = 'Bean Bowl',
+		label = '香脆豆子碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Bean bowl ready to be eaten.'
+		description = '隨時可以享用的佐酒豆子小食。'
 	},
 
 	['tk_nutbowl'] = {
-		label = 'Nut Bowl',
+		label = '雜錦果仁碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Nut bowl ready to be eaten.'
+		description = '隨時可以享用的雜錦果仁小食。'
 	},
 
-	-- Drinks
+	-- 飲品（Drinks）
 	['tk_tequilasunrise'] = {
-		label = 'Tequila-la Sunrise',
+		label = '龍舌蘭日出（Tequila-la Sunrise）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A classic sunrise, layers of tequila, orange, and grenadine. Tastes like a sunny Los Santos morning.'
+		description = '經典漸層雞尾酒，融合龍舌蘭、橙汁與紅石榴糖漿，猶如洛聖都的陽光早晨。'
 	},
 
 	['tk_paloma'] = {
-		label = 'Los Santos Paloma',
+		label = '洛聖都帕洛瑪（Los Santos Paloma）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Refreshing tequila and grapefruit soda with a salty kick. The unofficial drink of Vespucci Beach.'
+		description = '清爽的龍舌蘭配西柚梳打與微鹹口感，威斯普奇海灘的非官方代表飲品。'
 	},
 
 	['tk_vespuccimule'] = {
-		label = 'Vespucci Mule',
+		label = '威斯普奇騾子（Vespucci Mule）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A spicy kick of tequila and ginger beer. For when you have business at the Del Perro Pier.'
+		description = '龍舌蘭與辛辣薑汁啤酒的刺激碰撞，最適合在佩羅碼頭談生意時享用。'
 	},
 
 	['tk_margarita'] = {
-		label = 'La Margarita',
+		label = '招牌瑪格麗特（La Margarita）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'The house signature. Sharp, smooth, and salted. Just don\'t ask for a frozen one.'
+		description = '本店招牌特調，酸爽順滑並帶有鹽邊風味——千萬別問有沒有冰沙版。'
 	},
 
 	['tk_rhumrunner'] = {
-		label = 'Rhum Runner',
+		label = '蘭姆奔跑者（Rhum Runner）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A daring mix of tropical flavors and bold rum, crafted for those who chase adventure in every sip.'
+		description = '熱帶果香與醇厚蘭姆酒的大膽結合，專為追求刺激的冒險家調製。'
 	},
 
 	['tk_vodkarevolution'] = {
-		label = 'Vodka Revolution',
+		label = '伏特加革命（Vodka Revolution）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A crisp and bold vodka experience, designed to spark a revolution on your taste buds with every glass.'
+		description = '清冽濃烈的伏特加特調，每一口都為你的味蕾帶來全新衝擊。'
 	},
 
 	['tk_tequilabottle'] = {
-		label = 'Tequila Bottle',
+		label = '龍舌蘭酒（整瓶）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Bottle of premium tequila.'
+		description = '一瓶優質龍舌蘭烈酒。'
 	},
 
 	['tk_tequiladrink'] = {
-		label = 'Tequila Glass',
+		label = '龍舌蘭烈酒（杯裝）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'The original strong and smooth tequila shot.'
+		description = '原汁原味、烈而順口的龍舌蘭酒。'
 	},
 
 	['tk_rhumbottle'] = {
-		label = 'Rhum Bottle',
+		label = '蘭姆酒（整瓶）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Bottle of premium Caribbean rhum.'
+		description = '一瓶優質加勒比海蘭姆酒。'
 	},
 
 	['tk_rhumdrink'] = {
-		label = 'Rhum Glass',
+		label = '蘭姆酒（杯裝）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A rich and flavorful cocktail crafted with premium rhum.'
+		description = '以優質蘭姆酒調製的香醇飲品。'
 	},
 
 	['tk_vodkabottle'] = {
-		label = 'Vodka Bottle',
+		label = '伏特加（整瓶）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Bottle of premium vodka.'
+		description = '一瓶優質純淨伏特加。'
 	},
 
 	['tk_vodkadrink'] = {
-		label = 'Vodka Glass',
+		label = '伏特加（杯裝）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A crisp and clean glass of vodka, best served chilled.'
+		description = '清澈純淨的伏特加，冰鎮後飲用風味最佳。'
 	},
 
-	-- Cutting Table
+	-- 備料台切片食材
 	['tk_rawlemon'] = {
-		label = 'Raw Lemon',
+		label = '新鮮檸檬',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A fresh lemon ready to be sliced.'
+		description = '準備切開的新鮮檸檬。'
 	},
 
 	['tk_slicedlemon'] = {
-		label = 'Sliced Lemon',
+		label = '檸檬片',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Freshly sliced Lemon.'
+		description = '新鮮切好的檸檬片。'
 	},
 
 	['tk_raworange'] = {
-		label = 'Raw Orange',
+		label = '新鮮橙',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A fresh orange ready to be sliced.'
+		description = '準備切開的新鮮橙。'
 	},
 
 	['tk_slicedorange'] = {
-		label = 'Sliced Orange',
+		label = '橙片',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Freshly sliced orange.'
+		description = '新鮮切好的橙片。'
 	},
 
 	['tk_rawstrawberry'] = {
-		label = 'Raw Strawberry',
+		label = '新鮮士多啤梨',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A fresh strawberry ready to be sliced.'
+		description = '準備切片的新鮮士多啤梨。'
 	},
 
 	['tk_slicedstrawberry'] = {
-		label = 'Sliced Strawberry',
+		label = '士多啤梨片',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Freshly sliced strawberry.'
+		description = '新鮮切好的士多啤梨片。'
 	},
 
 	['tk_rawlime'] = {
-		label = 'Raw Lime',
+		label = '新鮮青檸',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A fresh lime ready to be sliced.'
+		description = '準備切開的新鮮青檸。'
 	},
 
 	['tk_slicedlime'] = {
-		label = 'Sliced Lime',
+		label = '青檸片',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Freshly sliced lime.'
+		description = '新鮮切好的青檸片。'
 	}
 })
 
-insert({	-- FiveCode - BurgerShot Job
-	-- Other
+insert({	-- FiveCode - BurgerShot 快餐店工作
+	-- 其他用品與調味料
     ['salt'] = {
-        label = 'Salt',
+        label = '食鹽',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Cooking salt!'
+        description = '烹調專用食鹽！'
     },
 
     ['burgershotdrinkcup'] = {
-        label = 'Empty Drinking Cup',
+        label = '空汽水杯',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Burgershot empty drinking cup.'
+        description = 'BurgerShot 空飲料杯。'
     },
 
     ['ice'] = {
-        label = 'Ice',
+        label = '冰塊',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Ice ready to cool your drink!'
+        description = '用來冰鎮飲品的冰塊！'
     },
 
     ['butter'] = {
-        label = 'Butter',
+        label = '牛油',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Butter for cooking.'
+        description = '烹調用牛油。'
     },
 
     ['colasyrup'] = {
-        label = 'eCola Syrup',
+        label = 'eCola 可樂糖漿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Syrup from which you can make delicious cola drink!'
+        description = '可用於調製美味可樂的濃縮糖漿！'
     },
 
     ['colalightsyrup'] = {
-        label = 'eCola Light Syrup',
+        label = '健怡 eCola 糖漿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Syrup from which you can make delicious light cola drink!'
+        description = '可用於調製低糖健怡可樂的濃縮糖漿！'
     },
 
     ['sprunksyrup'] = {
-        label = 'Sprunk Syrup',
+        label = '雪碧（Sprunk）糖漿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Syrup from which you can make delicious sprunk drink!'
+        description = '可用於調製清爽雪碧汽水的濃縮糖漿！'
     },
 
     ['orang_o_tangsyrup'] = {
-        label = 'Orang O Tang Syrup',
+        label = '香橙汽水（Orang O Tang）糖漿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Syrup from which you can make delicious orang o tang drink!'
+        description = '可用於調製香橙汽水的濃縮糖漿！'
     },
 
     ['ketchup'] = {
-        label = 'Ketchup',
+        label = '茄汁',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Normal ketchup.'
+        description = '經典番茄醬。'
     },
 
--- Cutting Table
+-- 備料台（Cutting Table）
     ['rawtomato'] = {
-        label = 'Tomato',
+        label = '番茄',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Juicy tomato ready to be sliced!'
+        description = '多汁的新鮮番茄，準備切片！'
     },
 
     ['slicedtomato'] = {
-        label = 'Sliced Tomato',
+        label = '番茄片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Juicy tomato slices ready to be eaten!'
+        description = '切好的多汁番茄片，隨時可夾入漢堡！'
     },
 
     ['rawsalad'] = {
-        label = 'Salad',
+        label = '生菜',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Salad ready to be sliced!'
+        description = '新鮮生菜，準備切絲！'
     },
 
     ['slicedsalad'] = {
-        label = 'Sliced Salad',
+        label = '生菜絲',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Salad slices ready to be eaten!'
+        description = '切好的爽脆生菜絲！'
     },
 
     ['rawcucumber'] = {
-        label = 'Cucumber',
+        label = '青瓜',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Cucumber ready to be cut!'
+        description = '新鮮青瓜，準備切片！'
     },
 
     ['slicedcucumber'] = {
-        label = 'Sliced Cucumber',
+        label = '青瓜片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced cucumber ready to be put on a burger and eaten!'
+        description = '切好的青瓜片，隨時可夾入漢堡享用！'
     },
 
     ['rawonion'] = {
-        label = 'Onion',
+        label = '洋蔥',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Onion ready to be cut!'
+        description = '新鮮洋蔥，準備切圈！'
     },
 
     ['slicedonion'] = {
-        label = 'Sliced Onion',
+        label = '洋蔥圈',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced onion ready to be put on a burger and eaten!'
+        description = '切好的洋蔥圈，隨時可夾入漢堡享用！'
     },
 
     ['rawchillipepper'] = {
-        label = 'Chilli Pepper',
+        label = '辣椒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Chilli pepper ready to be cut!'
+        description = '辛辣的紅辣椒，準備切片！'
     },
 
     ['slicedchillipepper'] = {
-        label = 'Sliced Chilli Pepper',
+        label = '辣椒片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced chilli pepper ready to be put on a burger and eaten!'
+        description = '切好的辣椒片，隨時可加入漢堡增添辣味！'
     },
 
     ['rawcheese'] = {
-        label = 'Cheese',
+        label = '芝士塊',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Cheese ready to be cut!'
+        description = '整塊芝士，準備切片！'
     },
 
     ['slicedcheese'] = {
-        label = 'Sliced Cheese',
+        label = '芝士片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced cheese ready to be put on a burger and eaten!'
+        description = '切好的香濃芝士片，隨時可夾入漢堡！'
     },
 
     ['rawham'] = {
-        label = 'Ham',
+        label = '火腿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Ham ready to be cut!'
+        description = '整塊火腿，準備切片！'
     },
 
     ['slicedham'] = {
-        label = 'Sliced Ham',
+        label = '火腿片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced ham ready to be put on a burger and eaten!'
+        description = '切好的火腿片，隨時可夾入漢堡！'
     },
 
     ['rawbacon'] = {
-        label = 'Bacon',
+        label = '煙肉',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Bacon ready to be cut!'
+        description = '生煙肉，準備切片！'
     },
 
     ['slicedbacon'] = {
-        label = 'Bacon',
+        label = '煙肉片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced bacon ready to be put on a sandwich or grilled and eaten!'
+        description = '切好的煙肉片，可夾入三文治或香煎享用！'
     },
 
     ['rawsandwichbread'] = {
-        label = 'Sandwich Bread',
+        label = '方包',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sandwich Bread ready to be cut!'
+        description = '整條方包，準備切片！'
     },
 
     ['slicedsandwichbread'] = {
-        label = 'Sandwich Bread',
+        label = '方包片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced sandwich bread ready to be put on a burger and eaten!'
+        description = '切好的方包片，隨時可用來製作三文治！'
     },
 
     ['rawburgerbun'] = {
-        label = 'Burger Bun',
+        label = '漢堡包',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Burger bun ready to be cut in half!'
+        description = '未切開的漢堡麵包，準備對半切開！'
     },
 
     ['slicedburgerbun'] = {
-        label = 'Sliced Burger Bun',
+        label = '切開的漢堡包',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced burger bun ready to be grilled!'
+        description = '已對半切開的漢堡麵包，準備放上煎爐烘烤！'
     },
 
--- Frier
+-- 炸爐（Fryer）
     ['frozenfries'] = {
-        label = 'Frozen Fries',
+        label = '急凍薯條',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Frozen fries ready to be fried!'
+        description = '急凍薯條，準備放入炸爐油炸！'
     },
 
     ['friedfries'] = {
-        label = 'Fries',
+        label = '炸薯條',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fries ready to be eaten!'
+        description = '金黃香脆的炸薯條！'
     },
 
     ['friedonionring'] = {
-        label = 'Onion Ring',
+        label = '炸洋蔥圈',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Onion ring ready to be eaten!'
+        description = '酥脆可口的炸洋蔥圈！'
     },
 
     ['friedmozzarellastick'] = {
-        label = 'Fried Mozzarella Stick',
+        label = '炸水牛芝士條',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fried mozzarella stick ready to be eaten!'
+        description = '外脆內拉絲的炸水牛芝士條！'
     },
 
     ['rawchickenstrip'] = {
-        label = 'Raw Chicken',
+        label = '生雞柳',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Raw chicken ready to be fried!'
+        description = '生雞柳，準備放入炸爐油炸！'
     },
 
     ['friedchickenstrip'] = {
-        label = 'Fried Chicken',
+        label = '炸雞柳',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fried chicken ready to be put into a burger and eaten!'
+        description = '香脆炸雞柳，隨時可夾入漢堡或直接享用！'
     },
 
     ['rawfishstrip'] = {
-        label = 'Raw Fish',
+        label = '生魚柳',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Raw fish ready to be fried!'
+        description = '生魚柳，準備放入炸爐油炸！'
     },
 
     ['friedfishstrip'] = {
-        label = 'Fried Fish',
+        label = '炸魚柳',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fried fish ready to be put into a burger and eaten!'
+        description = '外酥內嫩的炸魚柳，隨時可夾入漢堡享用！'
     },
 
--- Grill
+-- 煎爐（Grill）
     ['frozenburgermeat'] = {
-        label = 'Frozen Burger Meat',
+        label = '急凍漢堡扒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Frozen burger meat ready to be grilled!'
+        description = '急凍漢堡肉扒，準備放上煎爐香煎！'
     },
 
     ['grilledburgermeat'] = {
-        label = 'Grilled Burger Meat',
+        label = '香煎漢堡扒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Burger meat ready to be put into a burger and eaten!'
+        description = '煎得香噴噴的漢堡肉扒，隨時可夾入漢堡！'
     },
 
     ['grilledbacon'] = {
-        label = 'Grilled Bacon',
+        label = '香煎煙肉',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Burger bacon ready to be put into a burger and eaten!'
+        description = '煎得香脆的煙肉，隨時可夾入漢堡享用！'
     },
 
     ['rawsteak'] = {
-        label = 'Raw Steak',
+        label = '生牛扒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Raw steak ready to be grilled!'
+        description = '新鮮生牛扒，準備放上煎爐香煎！'
     },
 
     ['grilledsteak'] = {
-        label = 'Grilled Steak',
+        label = '香煎牛扒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Grilled steak ready to be put into a burger and eaten!'
+        description = '煎至多汁的牛扒，隨時可夾入漢堡享用！'
     },
 
     ['rawegg'] = {
-        label = 'Raw Egg',
+        label = '生雞蛋',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Egg steak ready to be grilled!'
+        description = '新鮮生雞蛋，準備放上煎爐煎熟！'
     },
 
     ['friedegg'] = {
-        label = 'Fried Egg',
+        label = '煎蛋',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fried egg ready to be put into a burger and eaten!'
+        description = '香煎荷包蛋，隨時可夾入漢堡享用！'
     },
 
     ['grilledburgerbun'] = {
-        label = 'Grilled Burger Bun',
+        label = '烘烤漢堡包',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Grilled burger bun ready to be filled!'
+        description = '烘烤至微焦香脆的漢堡麵包，準備夾入餡料！'
     },
 
--- Drinks
+-- 飲品（Drinks）
     ['burgershotcola'] = {
-        label = 'eCola',
+        label = 'eCola 可樂',
         weight = 1,
         stack = true,
         close = true,
-        description = 'eCola from burgershot.'
+        description = 'BurgerShot 出品的冰涼 eCola 可樂。'
     },
     
     ['burgershotcolalight'] = {
-        label = 'eCola Light',
+        label = '健怡 eCola 可樂',
         weight = 1,
         stack = true,
         close = true,
-        description = 'eCola light from burgershot.'
+        description = 'BurgerShot 出品的低糖健怡 eCola 可樂。'
     },
 
     ['burgershotsprunk'] = {
-        label = 'Sprunk',
+        label = '雪碧（Sprunk）',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sprunk from burgershot.'
+        description = 'BurgerShot 出品的冰涼雪碧汽水。'
     },
 
     ['burgershotorang_o_tang'] = {
-        label = 'Orang O Tang',
+        label = '香橙汽水（Orang O Tang）',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Orang o tang from burgershot.'
+        description = 'BurgerShot 出品的冰涼香橙汽水。'
     },
 
--- Burgers
+-- 漢堡成品（Burgers）
     ['classicburger'] = {
-        label = 'GrillMaster Classic Burger',
+        label = '大師經典漢堡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Classic burger with your favorite flavors!'
+        description = '充滿你最愛經典風味的招牌漢堡！'
     },
 
     ['classicburgerspicy'] = {
-        label = 'GrillMaster Spicy Classic Burger',
+        label = '大師香辣經典漢堡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Spicy classic burger with your favorite flavors!'
+        description = '加入香辣風味的經典招牌漢堡！'
     },
 
     ['chickenburger'] = {
-        label = 'Loaded Chicken Avenger',
+        label = '豪華脆雞復仇者漢堡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Chicken burger with your beloved crispy chicken!'
+        description = '夾滿金黃脆雞柳的美味雞堡！'
     },
 
     ['chickenburgerspicy'] = {
-        label = 'Loaded Spicy Chicken Avenger',
+        label = '豪華香辣脆雞復仇者漢堡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Spicy chicken burger with your beloved crispy chicken!'
+        description = '夾滿香辣脆雞柳的惹味雞堡！'
     },
 
     ['fishburger'] = {
-        label = 'Ocean Catch Burger',
+        label = '深海鮮魚漢堡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fish burger with your beloved freshly caught and fried fish!'
+        description = '夾著新鮮現炸脆魚柳的美味魚柳包！'
     },
 
     ['obeseburger'] = {
-        label = 'The Cardiac Crusher',
+        label = '心臟暴擊巨無霸',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A towering behemoth of beef, bacon, cheese, and toppings that will feed you or kill you!'
+        description = '層層疊滿牛肉扒、煙肉、芝士與豐富配料的巨型漢堡，要麼飽到撐、要麼吃到心臟病發！'
     },
 
     ['steakburger'] = {
-        label = 'The Cardiac Crusher',
+        label = '至尊牛扒巨無霸',
         weight = 1,
         stack = true,
         close = true,
-        description = 'For when you want your steak experience to be sandwiched between two buns, because who needs a plate, right?'
+        description = '當你想把整塊牛扒夾在兩片麵包中間大口咬下時的最佳選擇——誰還需要餐碟？'
     },
 
     ['reverseburger'] = {
-        label = 'Reverse Burger',
+        label = '反轉無包生菜漢堡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Flip tradition on its head and try this amazing reverse burger where salad replaced buns!'
+        description = '打破傳統！用爽脆生菜代替麵包的健康反轉漢堡！'
     },
 
     ['burgershotsandwich'] = {
-        label = 'Sunrise Ham Melt',
+        label = '晨光芝士火腿三文治',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Spicy chicken burger with your beloved crispy chicken!'
+        description = '夾滿香濃芝士與火腿的美味三文治！'
     },
 
 
--- Other Items
+-- 其他餐廳物品
     ['cleansponge'] = {
-        label = 'Clean Sponge',
+        label = '乾淨海綿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Clean sponge which is ready for some cleaning!'
+        description = '乾淨的清潔海綿，隨時可以用來清潔餐桌！'
     },
 
     ['dirtysponge'] = {
-        label = 'Dirty Sponge',
+        label = '髒海綿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Dirty sponge which needs to be cleaned!'
+        description = '弄髒了的海綿，需要拿去清洗！'
     },
 
     ['cleancup'] = {
-        label = 'Clean Cup',
+        label = '乾淨水杯',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Clean cup ready to be filled to the brim!'
+        description = '乾淨的水杯，隨時可以裝滿飲品！'
     },
 
     ['dirtycup'] = {
-        label = 'Dirty Cup',
+        label = '髒水杯',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Dirty cup which needs to be cleaned!'
+        description = '用過的水杯，需要拿去清洗！'
     },
 
     ['burgershotfoodtray'] = {
-        label = 'Food Tray',
+        label = '快餐餐盤',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Food tray from burgershot.'
+        description = '盛載 BurgerShot 餐點的快餐餐盤。'
     },
 
     ['burgershotfoodtrayempty'] = {
-        label = 'Empty Food Tray',
+        label = '空餐盤',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Empty food tray from burgershot.'
+        description = 'BurgerShot 的空快餐餐盤。'
     },
 })
 
-insert({	-- FiveCode - UwU Cafe
--- Other
+insert({	-- FiveCode - UwU 貓咪 Café
+-- 其他物品
     ['uwu_cleansponge'] = {
-        label = 'Clean Sponge',
+        label = '乾淨海綿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Clean sponge which is ready for some cleaning!'
+        description = '乾淨的清潔海綿，隨時可以用來清潔桌面！'
     },
 
     ['uwu_dirtysponge'] = {
-        label = 'Dirty Sponge',
+        label = '髒海綿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Dirty sponge which needs to be cleaned!'
+        description = '弄髒了的海綿，需要拿去清洗！'
     },
 
     ['uwu_cleanplate'] = {
-        label = 'Clean Plate',
+        label = '乾淨餐碟',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Clean plate to put food on.'
+        description = '用於盛載餐點的乾淨餐碟。'
     },
 
     ['uwu_dirtyplate'] = {
-        label = 'Dirty Plate',
+        label = '髒餐碟',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Dirty plate ready to be cleaned or served to your enemy.'
+        description = '用過的髒餐碟，需要清洗。'
     },
 
     ['uwu_cleancup'] = {
-        label = 'Clean Cup',
+        label = '乾淨咖啡杯',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Clean cup ready to be filled with something delicious.'
+        description = '乾淨的杯子，隨時可以裝滿美味飲品。'
     },
 
     ['uwu_dirtycup'] = {
-        label = 'Dirty Cup',
+        label = '髒咖啡杯',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Dirty cup ready to be cleaned or served to your enemy.'
+        description = '用過的髒杯子，需要清洗。'
     },
 
--- Mystery Box
+-- 盲盒與模型公仔（Mystery Box）
     ['uwu_mysterybox'] = {
-        label = 'UWU Mystery Box',
+        label = 'UwU 貓咪盲盒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Mystery box from uwu cat cafe which contains a lot of cool figures!'
+        description = '來自 UwU 貓咪 Café 的驚喜盲盒，裡面藏著各式可愛模型公仔！'
     },
 
     ['uwu_browncat'] = {
-        label = 'Brown Cat Figure',
+        label = '啡貓模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A cute brown cat figurine, perfect for collectors.'
+        description = '可愛的啡色貓咪模型公仔，極具收藏價值。'
     },
 
     ['uwu_redcat'] = {
-        label = 'Red Cat Figure',
+        label = '紅貓模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A rare red cat figure with a fiery appearance.'
+        description = '稀有的火紅色貓咪模型公仔，造型搶眼。'
     },
 
     ['uwu_greencat'] = {
-        label = 'Green Cat Figure',
+        label = '綠貓模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A calm and peaceful green cat figurine.'
+        description = '溫順療癒的綠色貓咪模型公仔。'
     },
 
     ['uwu_yellowcat'] = {
-        label = 'Yellow Cat Figure',
+        label = '黃貓模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A bright and cheerful yellow cat figure.'
+        description = '活潑開朗的亮黃色貓咪模型公仔。'
     },
 
     ['uwu_purplecat'] = {
-        label = 'Purple Cat Figure',
+        label = '紫貓模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A mystical and rare purple cat figurine.'
+        description = '充滿神秘氣息的稀有紫色貓咪模型公仔。'
     },
 
     ['uwu_bluecat'] = {
-        label = 'Blue Cat Figure',
+        label = '藍貓模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A cool and collected blue cat figure for your collection.'
+        description = '冷靜沉穩的藍色貓咪模型公仔，適合擺設收藏。'
     },
 
     ['uwu_shinywasabi'] = {
-        label = 'Shiny Wasabi Figure',
+        label = '閃亮山葵模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A shiny Wasabi figure, known for its sparkle.'
+        description = '散發閃亮光澤的特別版山葵模型公仔。'
     },
 
     ['uwu_master'] = {
-        label = 'Master Figure',
+        label = '武術宗師模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A legendary figure of a martial arts master.'
+        description = '傳說級武術大師造型的限定公仔。'
     },
 
     ['uwu_princessrobo'] = {
-        label = 'Princess Robo Figure',
+        label = '機械公主模型公仔',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A futuristic figure of Princess Robo, the ruler of the tech kingdom.'
+        description = '充滿未來科技感的機械公主限定模型公仔。'
     },
 
--- Cofee Machine
+-- 咖啡機材料與飲品（Coffee Machine）
     ['uwu_expresoshot'] = {
-        label = 'Shot Of Espresso',
+        label = '特濃咖啡（Espresso）',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A bold espresso shot brewed fresh.'
+        description = '新鮮萃取的香濃特濃咖啡。'
     },
 
     ['uwu_milk'] = {
-        label = 'Milk',
+        label = '鮮奶',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Milk.'
+        description = '新鮮牛奶。'
     },
 
     ['uwu_steamedmilk'] = {
-        label = 'Steamed Milk',
+        label = '熱奶泡（蒸奶）',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Velvety steamed milk.'
+        description = '綿密細滑的熱蒸鮮奶。'
     },
 
     ['uwu_frostedmilk'] = {
-        label = 'Frosted Milk',
+        label = '冰奶泡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Frosted milk.'
+        description = '冰涼綿密的鮮奶奶泡。'
     },
 
     ['uwu_vanillasyrup'] = {
-        label = 'Vanilla Syrup',
+        label = '雲呢拿糖漿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Smooth vanilla syrup.'
+        description = '香甜順滑的雲呢拿風味糖漿。'
     },
 
     ['uwu_cinnamon'] = {
-        label = 'Cinnamon',
+        label = '肉桂粉',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fragrant cinnamon spice.'
+        description = '香氣撲鼻的肉桂香料。'
     },
 
     ['uwu_caramelsyrup'] = {
-        label = 'Caramel Syrup',
+        label = '焦糖糖漿',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Rich caramel syrup.'
+        description = '香濃醇厚的焦糖風味糖漿。'
     },
 
     ['uwu_caramelsauce'] = {
-        label = 'Caramel Sauce',
+        label = '焦糖醬',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Decadent caramel sauce.'
+        description = '濃郁誘人的香甜焦糖淋醬。'
     },
 
     ['uwu_chocolate'] = {
-        label = 'Chocolate',
+        label = '朱古力',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Luxurious chocolate.'
+        description = '絲滑濃郁的優質朱古力。'
     },
 
     ['uwu_peppermintextract'] = {
-        label = 'Peppermint Extract',
+        label = '薄荷精華',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Cool peppermint extract.'
+        description = '清涼提神的天然薄荷萃取液。'
     },
 
     ['uwu_brownsugar'] = {
-        label = 'Brown Sugar',
+        label = '黑糖',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sweet brown sugar crystals.'
+        description = '香甜的天然黑糖結晶。'
     },
 
     ['uwu_cocoapowder'] = {
-        label = 'Cocoa Powder',
+        label = '可可粉',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Rich cocoa powder.'
+        description = '香醇濃郁的純可可粉。'
     },
 
     ['uwu_whiskersvanillalatte'] = {
-        label = 'Whiskers Vanilla Latte',
+        label = '貓鬚雲呢拿鮮奶咖啡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A rich and creamy vanilla latte with a smooth espresso base, purrfect for a cozy day.'
+        description = '香濃幼滑的雲呢拿鮮奶咖啡，配上順口濃縮咖啡基底，最適合悠閒午後享用。'
     },
 
     ['uwu_purrfectcaramelmacchiato'] = {
-        label = 'Purrfect Caramel Macchiato',
+        label = '喵星焦糖瑪奇朵',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Indulge in a velvety caramel macchiato, a delightful blend of sweet caramel and bold espresso.'
+        description = '綿密奶泡交織香甜焦糖與香濃咖啡，帶來完美享受。'
     },
 
     ['uwu_meowchamintmocha'] = {
-        label = 'Meowcha Mint Mocha',
+        label = '喵茶薄荷朱古力咖啡',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A refreshing twist of mint blended with rich chocolate and espresso, the ultimate mocha treat.'
+        description = '清新薄荷融合濃郁朱古力與特濃咖啡，口感層次豐富。'
     },
 
     ['uwu_kittyscreamycappuccino'] = {
-        label = 'Kittys Creamy Cappuccino',
+        label = '貓咪綿滑泡沫咖啡（Cappuccino）',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A classic cappuccino with an extra creamy texture, crafted to perfection for every coffee lover.'
+        description = '擁有格外綿密奶泡的經典泡沫咖啡，咖啡愛好者必試。'
     },
 
     ['uwu_uwucatcafehotchocolate'] = {
-        label = 'ChocoPaws Delight',
+        label = '貓爪濃情熱朱古力',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A warm and comforting cup of rich, velvety hot chocolate, perfect for cozy moments with a playful twist.'
+        description = '溫暖療癒的香濃熱朱古力，伴隨可愛貓爪造型拉花。'
     },
 
--- Mixer
+-- 攪拌機材料（Mixer）
     ['uwu_flour'] = {
-        label = 'Flour',
+        label = '麵粉',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Essential flour, perfect for crafting smooth dough.'
+        description = '烘焙必備的優質麵粉，適合製作順滑麵糰。'
     },
 
     ['uwu_rawegg'] = {
-        label = 'Raw Egg',
+        label = '生雞蛋',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fresh egg, ready to blend into your dough creation.'
+        description = '新鮮雞蛋，可加入麵糰中攪拌。'
     },
 
     ['uwu_butter'] = {
-        label = 'Butter',
+        label = '牛油',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Rich, creamy butter, ideal for baking.'
+        description = '香濃幼滑的烘焙專用牛油。'
     },
 
     ['uwu_yeast'] = {
-        label = 'Yeast',
+        label = '酵母粉',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Active yeast to help your dough rise to perfection.'
+        description = '幫助麵糰完美發酵膨脹的活性酵母。'
     },
 
     ['uwu_strawberry'] = {
-        label = 'Strawberry',
+        label = '士多啤梨',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fresh and sweet strawberry.'
+        description = '新鮮香甜的士多啤梨。'
     },
 
     ['uwu_blueberry'] = {
-        label = 'Blueberry',
+        label = '藍莓',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fresh and sweet blueberry.'
+        description = '新鮮飽滿的香甜藍莓。'
     },
 
     ['uwu_normaldough'] = {
-        label = 'Dough',
+        label = '原味麵糰',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Basic dough, ready to be transformed into a tasty treat.'
+        description = '基礎原味麵糰，可送入焗爐製作成各式美味糕點。'
     },
 
     ['uwu_chocolatedough'] = {
-        label = 'Chocolate Dough',
+        label = '朱古力麵糰',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Rich chocolate dough, perfect for baking delicious cookies.'
+        description = '香濃朱古力麵糰，適合烘焙美味朱古力曲奇與蛋糕。'
     },
 
     ['uwu_cupcakedough'] = {
-        label = 'Cupcake Dough',
+        label = '紙杯蛋糕麵糊',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Soft, fluffy cupcake dough, ready to be baked to perfection.'
+        description = '鬆軟綿密的紙杯蛋糕麵糊，準備送入焗爐烘焙。'
     },
 
--- Oven
+-- 焗爐甜品（Oven）
     ['uwu_chocopurrfectioncake'] = {
-        label = 'Choco Purrfection Cake',
+        label = '喵喵濃情朱古力蛋糕',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Chocolate cake for chocolate lowers.'
+        description = '專為朱古力愛好者烘焙的香濃朱古力蛋糕。'
     },
 
     ['uwu_kittenscloudpancakes'] = {
-        label = 'Kitten’s Cloud Pancakes',
+        label = '小貓雲朵班戟',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Soft, fluffy pancakes that melt in your mouth, topped with an adorable kitten-themed design.'
+        description = '入口即化的鬆軟班戟，飾有可愛小貓造型裝飾。'
     },
 
     ['uwu_strawberrymeowdelight'] = {
-        label = 'Strawberry Meow Delight',
+        label = '士多啤梨喵喵班戟',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fluffy strawberry pancakes with a sweet kitten-inspired topping, perfect for any dessert lover.'
+        description = '鬆軟士多啤梨班戟配上可愛貓咪糖霜裝飾，甜品控最愛。'
     },
 
     ['uwu_mintypawprintcupcake'] = {
-        label = 'Minty Pawprint Cupcake',
+        label = '薄荷貓掌紙杯蛋糕',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A refreshing mint-flavored cupcake decorated with a cute pawprint, offering a delightful minty treat.'
+        description = '清新薄荷口味紙杯蛋糕，點綴可愛貓掌印裝飾。'
     },
 
     ['uwu_caramelkittycrunch'] = {
-        label = 'Caramel Kitty Crunch',
+        label = '焦糖脆脆小貓紙杯蛋糕',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A rich caramel cupcake with a crunchy toffee topping, finished with a drizzle of caramel and cute kitty ear decorations.'
+        description = '濃郁焦糖紙杯蛋糕配上香脆拖肥碎、焦糖醬及可愛貓耳裝飾。'
     },
 
     ['uwu_vanillameowtasticake'] = {
-        label = 'Vanilla Meowtastic Cake',
+        label = '雲呢拿喵趣忌廉蛋糕',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A delightful vanilla cake with layers of creamy vanilla buttercream, adorned with charming pastel cat whiskers and fondant ears.'
+        description = '層層夾滿幼滑雲呢拿牛油忌廉的蛋糕，飾有粉嫩貓鬚與翻糖貓耳。'
     },	
 
     ['uwu_espressopawscupcake'] = {
-        label = 'Espresso Paws Cupcake',
+        label = '特濃咖啡貓爪紙杯蛋糕',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A rich espresso cupcake with a smooth coffee-flavored frosting, topped with a sprinkle of cocoa and cute pawprint decorations.'
+        description = '香濃咖啡紙杯蛋糕配上幼滑咖啡糖霜、可可粉及可愛貓爪裝飾。'
     },
 
     ['uwu_cinnamonwhiskerdelight'] = {
-        label = 'Cinnamon Whisker Delight',
+        label = '肉桂貓鬚紙杯蛋糕',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A warm cinnamon cupcake with a swirl of creamy cinnamon frosting, finished with a dusting of cinnamon sugar and playful whisker accents.'
+        description = '暖心肉桂紙杯蛋糕配上綿密肉桂糖霜、肉桂糖粉及俏皮貓鬚造型。'
     },
 
--- Stove
+-- 爐頭熱食（Stove）
     ['uwu_noodles'] = {
-        label = 'Noodles',
+        label = '麵條',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Noodles ready to be put into a delicious dish.'
+        description = '準備下鍋烹調的麵條。'
     },
 
     ['uwu_rawsteak'] = {
-        label = 'Raw Steak',
+        label = '生牛扒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Raw steak ready to be grilled.'
+        description = '新鮮生牛扒，準備下鍋香煎。'
     },
 
     ['uwu_grilledsteak'] = {
-        label = 'Grilled Steak',
+        label = '香煎牛扒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Grilled steak ready to be eaten.'
+        description = '煎得鮮嫩多汁的牛扒，隨時可以享用。'
     },
 
     ['uwu_friedegg'] = {
-        label = 'Fried Egg',
+        label = '煎蛋',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Fried egg ready to be put into a burger and eaten.'
+        description = '香煎太陽蛋，可搭配主食享用。'
     },
 
     ['uwu_rawonion'] = {
-        label = 'Onion',
+        label = '洋蔥',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Onion ready to be cut.'
+        description = '新鮮洋蔥，準備切絲或切片。'
     },
 
     ['uwu_slicedonion'] = {
-        label = 'Sliced Onion',
+        label = '洋蔥絲',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced onion ready to be put put into a delicious meal.'
+        description = '切好的洋蔥絲，隨時可下鍋烹調佳餚。'
     },
 
     ['uwu_rice'] = {
-        label = 'Rice',
+        label = '白米',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Cooking rice.'
+        description = '烹調用的優質白米。'
     },
 
     ['uwu_friedrice'] = {
-        label = 'Fried Rice',
+        label = '招牌炒飯',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Best tasting fried rice in your whole life.'
+        description = '粒粒分明、鑊氣十足的絕品炒飯。'
     },
 
     ['uwu_steakeggbreakfastspecial'] = {
-        label = 'Steak & Egg Breakfast Special',
+        label = '牛扒煎蛋精選早餐',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A classic combo of grilled steak, fried egg, and caramelized onions. A perfect hearty breakfast!'
+        description = '香煎牛扒、煎蛋與焦糖洋蔥的經典組合，份量十足的豐盛早餐！'
     },
 
     ['uwu_caramelizedonionsteakstirfry'] = {
-        label = 'Caramelized Onion Steak Stir-Fry',
+        label = '焦糖洋蔥炒牛柳',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Tender steak stir-fried with sweet caramelized onions, creating a rich and savory dish with a hint of sweetness.'
+        description = '鮮嫩牛扒切條配焦糖洋蔥大火快炒，鹹香中帶一絲清甜。'
     },
 
     ['uwu_chilliramen'] = {
-        label = 'Chilli Ramen',
+        label = '辛辣地獄拉麵',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Spicy ramen which will fill you up and make your face red.'
+        description = '香辣惹味的日式拉麵，保證讓你吃得滿頭大汗。'
     },
 
     ['uwu_kungpao'] = {
-        label = 'Kung Pao',
+        label = '宮保雞丁',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A bold and spicy dish with a satisfying blend of flavors, offering a deliciously balanced experience in every bite.'
+        description = '酸甜微辣、層次豐富的中式經典名菜，每一口都令人回味。'
     },
 
     ['uwu_shanghaisoyscallionnoodles'] = {
-        label = 'Shanghai Soy Scallion Noodles',
+        label = '上海蔥油拌麵',
         weight = 1,
         stack = true,
         close = true,
-        description = 'A flavorful and aromatic dish with a perfect balance of savory and satisfying textures.'
+        description = '蔥香四溢、醬汁濃郁的上海招牌蔥油拌麵。'
     },
 
     ['uwu_rawchillipepper'] = {
-        label = 'Chilli Pepper',
+        label = '辣椒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Chilli pepper ready to be cut.'
+        description = '新鮮辣椒，準備切片。'
     },
 
     ['uwu_slicedchillipepper'] = {
-        label = 'Sliced Chilli Pepper',
+        label = '辣椒片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced chilli pepper ready to be eaten.'
+        description = '切好的辣椒片，隨時可入饌調味。'
     },
 
     ['uwu_rawcucumber'] = {
-        label = 'Cucumber',
+        label = '青瓜',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Cucumber ready to be cut!'
+        description = '新鮮青瓜，準備切片！'
     },
 
     ['uwu_slicedcucumber'] = {
-        label = 'Sliced cucumber',
+        label = '青瓜片',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Sliced cucumber ready to be put on a burger and eaten!'
+        description = '切好的爽脆青瓜片！'
     },
 
     ['uwu_rawchicken'] = {
-        label = 'Raw chicken',
+        label = '生雞肉',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Raw chicken.'
+        description = '新鮮生雞肉。'
     },
 
     ['uwu_grilledchicken'] = {
-        label = 'Grilled chicken',
+        label = '香煎雞扒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Grilled chicken.'
+        description = '煎至金黃香嫩的雞扒。'
     },
 
     ['uwu_grilledchickenpiece'] = {
-        label = 'Grilled chicken piece',
+        label = '香煎雞肉粒',
         weight = 1,
         stack = true,
         close = true,
-        description = 'Grilled chicken piece.'
+        description = '切件香煎雞肉粒。'
     },
 })
 
-insert({	-- FiveCode - Unicorn
-	-- Other
+insert({	-- FiveCode - Unicorn 夜店工作
+	-- 其他用品與香煙
 	['vu_ticket'] = {
-		label = 'Ticket - Vanilla Unicorn',
+		label = 'Vanilla Unicorn 入場券',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Vanilla unicorn ticket.'
+		description = 'Vanilla Unicorn 夜店入場券。'
 	},
 
 	['vu_cleansponge'] = {
-		label = 'Clean Sponge',
+		label = '乾淨海綿',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean sponge which is ready for some cleaning!'
+		description = '乾淨的清潔海綿，隨時可用來清潔桌面！'
 	},
 
 	['vu_dirtysponge'] = {
-		label = 'Dirty Sponge',
+		label = '髒海綿',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty sponge which needs to be cleaned!'
+		description = '弄髒了的海綿，需要拿去清洗！'
 	},
 
 	['vu_redwoodcigpack'] = {
-		label = 'Redwood Cigarette Pack',
+		label = '紅木牌香煙（整包）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A pack of premium Redwood cigarettes, the favorite brand of Vinewood elites.'
+		description = '一包高級紅木牌香煙，好麥塢名流的最愛品牌。'
 	},
 
 	['vu_redwoodcigsingle'] = {
-		label = 'Redwood Cigarette',
+		label = '紅木牌香煙（單支）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A single Redwood cigarette, smooth and satisfying.'
+		description = '一支口感順滑的紅木牌香煙。'
 	},
 
 	['vu_estanciacigpack'] = {
-		label = 'Estancia Cigarette Pack',
+		label = '莊園牌香煙（整包）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A pack of Estancia cigarettes, known for their bold and rich flavor.'
+		description = '一包莊園牌香煙，以濃郁醇厚的煙草風味聞名。'
 	},
 
 	['vu_estanciacigsingle'] = {
-		label = 'Estancia Cigarette',
+		label = '莊園牌香煙（單支）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A single Estancia cigarette, a strong hit for those who crave intensity.'
+		description = '一支煙味濃烈的莊園牌香煙，適合追求強烈口感的人士。'
 	},
 
 	['vu_sugar'] = {
-		label = 'Sugar',
+		label = '砂糖',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Sugar.'
+		description = '調酒用砂糖。'
 	},
 
 	['vu_ice'] = {
-		label = 'Ice',
+		label = '冰塊',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Ice ready to cool your drink!'
+		description = '用來冰鎮飲品的冰塊！'
 	},
 
 	['vu_soda'] = {
-		label = 'Soda',
+		label = '梳打水',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Soda.'
+		description = '調酒用梳打水。'
 	},
 
 	['vu_juice'] = {
-		label = 'Juice',
+		label = '果汁',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Juice.'
+		description = '調酒用果汁。'
 	},
 
 	['vu_coconutcream'] = {
-		label = 'Coconut Cream',
+		label = '椰漿',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Coconut Cream.'
+		description = '香濃椰漿。'
 	},
 
-	-- Snacks
+	-- 小食（Snacks）
 	['vu_cleanbowl'] = {
-		label = 'Clean Bowl',
+		label = '乾淨小食碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean bowl to put food into.'
+		description = '用於盛載小食的乾淨碗。'
 	},
 
 	['vu_dirtybowl'] = {
-		label = 'Dirty Bowl',
+		label = '髒小食碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty bowl ready to be cleaned.'
+		description = '用過的小食碗，需要清洗。'
 	},
 
 	['vu_beanbowl'] = {
-		label = 'Bean Bowl',
+		label = '香脆豆子碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Bean bowl ready to be eaten.'
+		description = '隨時可以享用的佐酒豆子小食。'
 	},
 
 	['vu_nutbowl'] = {
-		label = 'Nut Bowl',
+		label = '雜錦果仁碗',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Nut bowl ready to be eaten.'
+		description = '隨時可以享用的雜錦果仁小食。'
 	},
 
 	['vu_beans'] = {
-		label = 'Beans',
+		label = '佐酒豆子',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Beans to put into a clean bowl.'
+		description = '可盛入乾淨碗中的佐酒豆子。'
 	},
 
 	['vu_nuts'] = {
-		label = 'Nuts',
+		label = '果仁',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Nuts to put into a clean bowl.'
+		description = '可盛入乾淨碗中的佐酒果仁。'
 	},
 
-	-- Drinks
+	-- 酒杯與飲品（Drinks）
 	['vu_cleanshortglass'] = {
-		label = 'Clean Short Glass',
+		label = '乾淨矮身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean short glass ready to be filled up with a drink of your choice.'
+		description = '乾淨的矮身酒杯，隨時可以盛載自選飲品。'
 	},
 
 	['vu_dirtyshortglass'] = {
-		label = 'Dirty Short Glass',
+		label = '髒矮身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty short glass ready to be cleaned.'
+		description = '用過的矮身酒杯，需要清洗。'
 	},
 
 	['vu_cleantallglass'] = {
-		label = 'Clean Tall Glass',
+		label = '乾淨高身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean tall glass ready to be filled up with a drink of your choice.'
+		description = '乾淨的高身酒杯，隨時可以盛載自選飲品。'
 	},
 
 	['vu_dirtytallglass'] = {
-		label = 'Dirty Tall Glass',
+		label = '髒高身杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty tall glass ready to be cleaned.'
+		description = '用過的高身酒杯，需要清洗。'
 	},
 
 	['vu_cleancocktailglass'] = {
-		label = 'Clean Cocktail Glass',
+		label = '乾淨雞尾酒杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Clean cocktail glass ready to be filled up with a drink of your choice.'
+		description = '乾淨的雞尾酒杯，隨時可以盛載特調雞尾酒。'
 	},
 
 	['vu_dirtycocktailglass'] = {
-		label = 'Dirty Cocktail Glass',
+		label = '髒雞尾酒杯',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Dirty cocktail glass ready to be cleaned.'
+		description = '用過的雞尾酒杯，需要清洗。'
 	},
 
 	['vu_rhumbottle'] = {
-		label = 'Rhum Glass',
+		label = '蘭姆酒（整瓶）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A bottle of fine rhum.'
+		description = '一瓶上等蘭姆酒。'
 	},
 		
 	['vu_tequilabottle'] = {
-		label = 'Tequila Glass',
+		label = '龍舌蘭酒（整瓶）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A premium bottle of tequila.'
+		description = '一瓶高級龍舌蘭酒。'
 	},
 		
 	['vu_vodkabottle'] = {
-		label = 'Vodka Glass',
+		label = '伏特加（整瓶）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A crisp and clean vodka bottle, perfect for mixing or enjoying straight.'
+		description = '一瓶清冽純淨的伏特加，適合調酒或純飲。'
 	},
 		
 	['vu_whiskeybottle'] = {
-		label = 'Whiskey Glass',
+		label = '威士忌（整瓶）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A smooth bottle of aged whiskey.'
+		description = '一瓶陳年醇厚威士忌。'
 	},
 
 	['vu_mojitodrink'] = {
-		label = 'Mojito Cocktail',
+		label = '莫希托雞尾酒（Mojito）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A refreshing cocktail made with rum, mint, lime, sugar, and soda water.'
+		description = '以蘭姆酒、薄荷葉、青檸、砂糖及梳打水調製的清爽雞尾酒。'
 	},
 
 	['vu_pinacoladadrink'] = {
-		label = 'Piña Colada',
+		label = '椰林飄香（Piña Colada）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A tropical mix of rum, pineapple, and coconut cream over ice.'
+		description = '蘭姆酒、菠蘿汁與香濃椰漿加冰搖勻的熱帶風情雞尾酒。'
 	},
 
 	['vu_tequilasunrisedrink'] = {
-		label = 'Tequila Sunrise',
+		label = '龍舌蘭日出（Tequila Sunrise）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A vibrant cocktail with tequila, citrus juice, and a hint of sweetness.'
+		description = '色彩鮮艷的龍舌蘭特調，融合柑橘果汁與香甜果漿。'
 	},
 
 	['vu_unicornblissdrink'] = {
-		label = 'Unicorn Bliss',
+		label = '獨角獸之夢（Unicorn Bliss）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A smooth vodka cocktail with citrus juice and a hint of lemon.'
+		description = '口感順滑的伏特加特調，帶有清新柑橘與檸檬果香。'
 	},
 
 	['vu_lossantosdrink'] = {
-		label = 'Los Santos',
+		label = '洛聖都特調（Los Santos）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A smooth vodka cocktail with citrus juice and a hint of lemon.'
+		description = '順滑伏特加基底搭配柑橘果汁與淡淡檸檬清香。'
 	},
 
 	['vu_paletobaydrink'] = {
-		label = 'Paleto Bay',
+		label = '佩立托灣特調（Paleto Bay）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A smooth vodka cocktail with citrus juice and a hint of lemon.'
+		description = '順滑伏特加基底搭配柑橘果汁與淡淡檸檬清香。'
 	},
 		
 	['vu_rhumdrink'] = {
-		label = 'Rhum Drink',
+		label = '蘭姆酒（杯裝）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A rich and flavorful cocktail crafted with premium rhum.'
+		description = '以優質蘭姆酒調製的香醇飲品。'
 	},
 		
 	['vu_tequiladrink'] = {
-		label = 'Tequila Shot',
+		label = '龍舌蘭烈酒（杯裝）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A strong and smooth tequila shot.'
+		description = '濃烈而順口的龍舌蘭烈酒。'
 	},
 		
 	['vu_whiskeydrink'] = {
-		label = 'Whiskey Glass',
+		label = '威士忌（杯裝）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A fine glass of aged whiskey, perfect for sipping and enjoying.'
+		description = '一杯陳年威士忌，適合細意品嚐。'
 	},
 
 	['vu_vodkadrink'] = {
-		label = 'Vodka Glass',
+		label = '伏特加（杯裝）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A crisp and clean glass of vodka, best served chilled.'
+		description = '清澈純淨的伏特加，冰鎮後飲用最佳。'
 	},
 		
 	['vu_lossantos'] = {
-		label = 'Los Santos',
+		label = '洛聖都經典（Los Santos）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A signature city-inspired cocktail with a unique blend of flavors.'
+		description = '以洛聖都城市為靈感的招牌特調雞尾酒，風味獨特。'
 	},
 		
 	['vu_paletobay'] = {
-		label = 'Paleto Bay',
+		label = '佩立托灣海風（Paleto Bay）',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'A tropical and smooth drink inspired by the coastal town of Paleto Bay.'
+		description = '充滿海濱風情的順滑熱帶特調飲品。'
 	},	
 
 
-	-- Cutting Table
+	-- 備料台切片食材
 	['vu_rawlime'] = {
-		label = 'Raw Lime',
+		label = '新鮮青檸',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Raw Lime.'
+		description = '新鮮青檸。'
 	},
 
 	['vu_slicedlime'] = {
-		label = 'Sliced Lime',
+		label = '青檸片',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Sliced Lime.'
+		description = '切好的青檸片。'
 	},
 
 	['vu_rawlemon'] = {
-		label = 'Raw Lemon',
+		label = '新鮮檸檬',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Raw Lemon.'
+		description = '新鮮檸檬。'
 	},
 
 	['vu_slicedlemon'] = {
-		label = 'Sliced Lemon',
+		label = '檸檬片',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Sliced Lemon.'
+		description = '切好的檸檬片。'
 	},
 
 	['vu_rawstrawberry'] = {
-		label = 'Raw Strawberry',
+		label = '新鮮士多啤梨',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Raw Strawberry.'
+		description = '新鮮士多啤梨。'
 	},
 
 	['vu_slicedstrawberry'] = {
-		label = 'Sliced Strawberry',
+		label = '士多啤梨片',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Sliced Strawberry.'
+		description = '切好的士多啤梨片。'
 	},
 
 	['vu_rawmint'] = {
-		label = 'Raw Mint',
+		label = '新鮮薄荷葉',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Raw mint.'
+		description = '新鮮薄荷葉。'
 	},
 
 	['vu_slicedmint'] = {
-		label = 'Sliced Mint',
+		label = '切碎薄荷葉',
 		weight = 1,
 		stack = true,
 		close = true,
-		description = 'Sliced mint.'
+		description = '切好的薄荷葉。'
 	},
 })
 
-insert({	-- ???? idk i forgot :<
+insert({	-- 便利店食物飲品及工具
     ['sludgie'] = {
         name = 'sludgie',
-        label = 'Sludgie',
+        label = '思樂冰（Sludgie）',
         weight = 350,
         client = {
             status = { thirst = 200000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
             prop = { model = 'prop_ld_can_01', pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
             usetime = 2500,
-            notification = 'You quenched your thirst with a Coffee'
+            notification = '你喝了一杯冰涼飲品解渴'
         }
     },
     ['ecola_light'] = {
         name = 'ecola_light',
-        label = 'Ecola light',
+        label = '健怡 eCola',
         weight = 350,
         client = {
             status = { thirst = 200000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
             prop = { model = 'prop_ld_can_01', pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
             usetime = 2500,
-            notification = 'You quenched your thirst with a Coffee'
+            notification = '你喝了一罐飲品解渴'
         }
     },
     ['ecola'] = {
         name = 'ecola',
-        label = 'Ecola',
+        label = 'eCola 可樂',
         weight = 350,
         client = {
             status = { thirst = 200000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
             prop = { model = 'prop_ld_can_01', pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
             usetime = 2500,
-            notification = 'You quenched your thirst with a Coffee'
+            notification = '你喝了一罐飲品解渴'
         }
     },
     ['coffee'] = {
         name = 'coffee',
-        label = 'Coffee',
+        label = '咖啡',
         weight = 350,
         client = {
             status = { thirst = 200000 },
             anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
             prop = { model = 'prop_ld_can_01', pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
             usetime = 2500,
-            notification = 'You quenched your thirst with a Coffee'
+            notification = '你喝了一杯香濃咖啡'
         }
     },
     ['fries'] = {
         name = 'fries',
-        label = 'Fries',
+        label = '炸薯條',
         weight = 350,
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
             prop = { model = 'prop_food_cb_chips', pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
             usetime = 2500,
-            notification = 'You eat Fries'
+            notification = '你吃了一份炸薯條'
         }
     },
     ['pizza_ham'] = {
         name = 'pizza_ham',
-        label = 'Pizza Ham',
+        label = '火腿薄餅（Pizza）',
         weight = 350,
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
             prop = { model = 'prop_food_cb_chips', pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
             usetime = 2500,
-            notification = 'You eat Fries'
+            notification = '你吃了一件火腿薄餅'
         }
     },
     ['chips'] = {
         name = 'chips',
-        label = 'Chips',
+        label = '薯片',
         weight = 350,
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
             prop = { model = 'prop_food_cb_chips', pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
             usetime = 2500,
-            notification = 'You eat Chips'
+            notification = '你吃了一包薯片'
         }
     },
     ['donut'] = {
         name = 'donut',
-        label = 'Donut',
+        label = '冬甩（甜甜圈）',
         weight = 350,
         client = {
             status = { hunger = 200000 },
             anim = { dict = 'mp_player_inteat@burger', clip = 'mp_player_int_eat_burger_fp' },
             prop = { model = 'prop_amb_donut', pos = vec3(0.02, 0.02, -0.02), rot = vec3(0.0, 0.0, 0.0) },
             usetime = 2500,
-            notification = 'You eat Donut'
+            notification = '你吃了一個冬甩'
         }
     },
     ['wire_cutter'] = {
         name = 'wire_cutter',
-        label = 'cutter',
+        label = '剪線鉗',
         weight = 100,
         stack = true,
         consume = 0,
@@ -4433,7 +4433,7 @@ insert({	-- ???? idk i forgot :<
     },
     ['cigarrete'] = {
         name = 'cigarrete',
-        label = 'Cigarrete',
+        label = '香煙',
         weight = 100,
         stack = true,
         consume = 0,
@@ -4441,7 +4441,7 @@ insert({	-- ???? idk i forgot :<
     },
     ['screwdriver'] = {
         name = 'screwdriver',
-        label = 'Screw Driver',
+        label = '螺絲批',
         weight = 100,
         stack = true,
         consume = 0,
@@ -4449,204 +4449,204 @@ insert({	-- ???? idk i forgot :<
     },
 })
 
-insert({	-- JG mechanic
-	-- Servicing Items
+insert({	-- JG mechanic 車房改裝與維修零件
+	-- 保養維修零件（Servicing Items）
 	["engine_oil"] = {
-		label = "Engine Oil",
+		label = "機油",
 		weight = 1000,
 	},
 	["tyre_replacement"] = {
-		label = "Tyre Replacement",
+		label = "輪胎更換套裝",
 		weight = 1000,
 	},
 	["clutch_replacement"] = {
-		label = "Clutch Replacement",
+		label = "離合器更換套裝（極力子）",
 		weight = 1000,
 	},
 	["air_filter"] = {
-		label = "Air Filter",
+		label = "空氣濾清器（風格）",
 		weight = 100,
 	},
 	["spark_plug"] = {
-		label = "Spark Plug",
+		label = "火嘴（火花塞）",
 		weight = 1000,
 	},
 	["brakepad_replacement"] = {
-		label = "Brakepad Replacement",
+		label = "煞車皮更換套裝",
 		weight = 1000,
 	},
 	["suspension_parts"] = {
-		label = "Suspension Parts",
+		label = "懸掛系統零件",
 		weight = 1000,
 	},
-	-- Engine Items
+	-- 引擎總成（Engine Items）
 	["i4_engine"] = {
-		label = "I4 Engine",
+		label = "直列四缸（I4）引擎",
 		weight = 1000,
 	},
 	["v6_engine"] = {
-		label = "V6 Engine",
+		label = "V6 引擎",
 		weight = 1000,
 	},
 	["v8_engine"] = {
-		label = "V8 Engine",
+		label = "V8 引擎",
 		weight = 1000,
 	},
 	["v12_engine"] = {
-		label = "V12 Engine",
+		label = "V12 引擎",
 		weight = 1000,
 	},
 	["turbocharger"] = {
-		label = "Turbocharger",
+		label = "渦輪增壓器（Turbo）",
 		weight = 1000,
 	},
-	-- Electric Engines
+	-- 電動車動力組件（Electric Engines）
 	["ev_motor"] = {
-		label = "EV Motor",
+		label = "電動摩打",
 		weight = 1000,
 	},
 	["ev_battery"] = {
-		label = "EV Battery",
+		label = "電動車電池",
 		weight = 1000,
 	},
 	["ev_coolant"] = {
-		label = "EV Coolant",
+		label = "電動車冷卻液",
 		weight = 1000,
 	},
-	-- Drivetrain Items
+	-- 傳動驅動系統（Drivetrain Items）
 	["awd_drivetrain"] = {
-		label = "AWD Drivetrain",
+		label = "四輪驅動（AWD）系統",
 		weight = 1000,
 	},
 	["rwd_drivetrain"] = {
-		label = "RWD Drivetrain",
+		label = "後輪驅動（RWD）系統",
 		weight = 1000,
 	},
 	["fwd_drivetrain"] = {
-		label = "FWD Drivetrain",
+		label = "前輪驅動（FWD）系統",
 		weight = 1000,
 	},
-	-- Tuning Items
+	-- 性能改裝套件（Tuning Items）
 	["slick_tyres"] = {
-		label = "Slick Tyres",
+		label = "光頭胎",
 		weight = 1000,
 	},
 	["semi_slick_tyres"] = {
-		label = "Semi Slick Tyres",
+		label = "半熱熔胎",
 		weight = 1000,
 	},
 	["offroad_tyres"] = {
-		label = "Offroad Tyres",
+		label = "越野胎",
 		weight = 1000,
 	},
 	["drift_tuning_kit"] = {
-		label = "Drift Tuning Kit",
+		label = "飄移調校套裝",
 		weight = 1000,
 	},
 	["ceramic_brakes"] = {
-		label = "Ceramic Brakes",
+		label = "陶瓷煞車系統",
 		weight = 1000,
 	},
-	-- Cosmetic Items
+	-- 外觀改裝套件（Cosmetic Items）
 	["lighting_controller"] = {
-		label = "Lighting Controller",
+		label = "燈光控制器",
 		weight = 100,
 		client = {
 		event = "jg-mechanic:client:show-lighting-controller",
 		}
 	},
 	["stancing_kit"] = {
-		label = "Stancer Kit",
+		label = "低趴調校套裝",
 		weight = 100,
 		client = {
 		event = "jg-mechanic:client:show-stancer-kit",
 		}
 	},
 	["cosmetic_part"] = {
-		label = "Cosmetic Parts",
+		label = "車身包圍外觀零件",
 		weight = 100,
 	},
 	["respray_kit"] = {
-		label = "Respray Kit",
+		label = "車身噴漆套裝",
 		weight = 1000,
 	},
 	["vehicle_wheels"] = {
-		label = "Vehicle Wheels Set",
+		label = "輪圈套裝",
 		weight = 1000,
 	},
 	["tyre_smoke_kit"] = {
-		label = "Tyre Smoke Kit",
+		label = "燒胎煙霧改裝套件",
 		weight = 1000,
 	},
 	["bulletproof_tyres"] = {
-		label = "Bulletproof Tyres",
+		label = "防彈輪胎",
 		weight = 1000,
 	},
 	["extras_kit"] = {
-		label = "Extras Kit",
+		label = "額外配件套裝",
 		weight = 1000,
 	},
-	-- Nitrous & Cleaning Items
+	-- 氮氣加速與清潔維修工具
 	["nitrous_bottle"] = {
-		label = "Nitrous Bottle",
+		label = "氮氣瓶（NOS）",
 		weight = 1000,
 		client = {
 		event = "jg-mechanic:client:use-nitrous-bottle",
 		}
 	},
 	["empty_nitrous_bottle"] = {
-		label = "Empty Nitrous Bottle",
+		label = "空氮氣瓶",
 		weight = 1000,
 	},
 	["nitrous_install_kit"] = {
-		label = "Nitrous Install Kit",
+		label = "氮氣系統安裝套裝",
 		weight = 1000,
 	},
 	["cleaning_kit"] = {
-		label = "Cleaning Kit",
+		label = "車輛清潔套裝",
 		weight = 1000,
 		client = {
 		event = "jg-mechanic:client:clean-vehicle",
 		}
 	},
 	["repair_kit"] = {
-		label = "Repair Kit",
+		label = "車輛維修工具箱",
 		weight = 1000,
 		client = {
 		event = "jg-mechanic:client:repair-vehicle",
 		}
 	},
 	["duct_tape"] = {
-		label = "Duct Tape",
+		label = "強力牛皮膠紙",
 		weight = 1000,
 		client = {
 		event = "jg-mechanic:client:use-duct-tape",
 		}
 	},
-	-- Performance Item
+	-- 通用性能升級零件
 	["performance_part"] = {
-		label = "Performance Parts",
+		label = "性能改裝零件",
 		weight = 1000,
 	},
-	-- Mechanic Tablet Item
+	-- 車房技工平板電腦
 	["mechanic_tablet"] = {
-		label = "Mechanic Tablet",
+		label = "車房技工平板電腦",
 		weight = 1000,
 		client = {
 		event = "jg-mechanic:client:use-tablet",
 		}
 	},
-	-- Gearbox
+	-- 波箱
 	["manual_gearbox"] = {
-		label = "Manual Gearbox",
+		label = "手動波箱",
 		weight = 1000,
 	},
 })
 
 --[[
-insert({	-- okokPhone
+insert({	-- okokPhone（已停用）
 	['okokphone'] = {
-			label = 'Phone',
+			label = '手提電話',
 			weight = 190,
 			stack = false,
 			consume = 0,
@@ -4655,7 +4655,7 @@ insert({	-- okokPhone
 			}
 	},
 	['simcard'] = {
-				label = 'Sim Card',
+				label = 'SIM 電話卡',
 				weight = 1,
 				stack = false,
 				consume = 0,
@@ -4668,35 +4668,35 @@ insert({	-- okokPhone
 
 insert({	-- okokGarage
 	['keys'] = {
-		label = 'Car Keys',
+		label = '車匙',
 		weight = 1,
 		stack = false,
 		close = false,
-		description = "Car Keys",
+		description = "車輛鑰匙",
 		server = {
 			export = 'okokGarage.lockvehicle',
 		},
 	},
 })
 
-insert({	-- quasarHousing
+insert({	-- quasarHousing 房屋系統
 	['housekey'] = {
-		label = 'House Key',
+		label = '住宅門匙',
 		weight = 100,
 		stack = false,
 		close = true,
-		description = 'Your house key, do not lose it.',
+		description = '你的住宅大門鑰匙，請妥善保管切勿遺失。',
 		server = { export = 'qs-housing.useHouseKey' },
 	},
-	['lockpick'] = { label = 'Lockpick', weight = 100, stack = true },
-	['police_stormram'] = { label = 'Police Storm Ram', weight = 800, stack = false },
-	['pet_food'] = { label = 'Pet Food', weight = 200, stack = true },
-	['pet_water'] = { label = 'Pet Water', weight = 200, stack = true },
+	['lockpick'] = { label = '開鎖工具', weight = 100, stack = true },
+	['police_stormram'] = { label = '警用破門鎚', weight = 800, stack = false },
+	['pet_food'] = { label = '寵物糧食', weight = 200, stack = true },
+	['pet_water'] = { label = '寵物飲用水', weight = 200, stack = true },
 })
 
-insert({	-- lb-tablet
+insert({	-- lb-tablet 平板電腦
 	["tablet"] = {
-		label = "Tablet",
+		label = "平板電腦",
 		weight = 840,
 		stack = false,
 		consume = 0,
@@ -4706,9 +4706,9 @@ insert({	-- lb-tablet
 	},
 })
 
-insert({	-- mm_radio
+insert({	-- mm_radio 無線電對講機
 	['radio'] = {
-		label = 'Radio',
+		label = '無線電對講機',
 		weight = 1000,
 		allowArmed = true,
 		consume = 0,
@@ -4718,7 +4718,7 @@ insert({	-- mm_radio
 	},
 
 	['jammer'] = {
-		label = 'Radio Jammer',
+		label = '訊號干擾器',
 		weight = 10000,
 		allowArmed = true,
 		client = {
@@ -4727,7 +4727,7 @@ insert({	-- mm_radio
 	},
 
 	['radiocell'] = {
-		label = 'AAA Cells',
+		label = 'AAA 乾電池',
 		weight = 1000,
 		stack = true,
 		allowArmed = true,
